@@ -1,0 +1,132 @@
+
+
+html,
+body {
+    height: 100%;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.affix {
+            top: 0;
+            width: 100%;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+            background-color: ;
+            border-color: #F44336;
+          }
+        .affix a {
+            color: #fff !important;
+            padding: 15px !important;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+          }
+
+        .affix > a:hover {
+            color: #fff;
+
+        }
+        .affix-top a {
+            padding: 25px !important;
+          }
+        .affix + .container-fluid {
+            padding-top: 95px;
+          }
+
+
+        #about {
+            height: ;
+            background-color: #f05f40;
+            box-shadow: 0 1px 10px grey;
+        }
+
+        #services {
+            box-shadow: 0 1px 10px grey;
+        }
+
+        #contact > .container-fluid{
+            background-color: #222;
+        }
+
+        #coco {
+            color: #f05f40;
+            letter-spacing: 3px;
+        }
+        
+        a .active  {
+            color: #f05f40;
+        }
+
+        .navbar-default {
+            background-color: rgba(0,0,0,.5);
+        }
+
+        .navbar-default a:hover{color: #fff;
+
+        }
+
+
+        button {
+            margin-right: 5px;
+        }
+
+        .glyphicon {
+            color: #f05f40;
+            font-size: 4em;
+        }
+
+
+
+        .navbar-default .navbar-nav > li > a {
+            color: #f05f40;
+        }
+
+        .navbar-default .navbar-nav > li > a:focus,.navbar-default .navbar-nav > li > a:hover {
+            color: #fff;
+            background-color: transparent;
+            transition: all .3s;
+        }
+        
+        #facebook, #github, #letstart {
+            font-weight: bold;
+            border-radius: 0;
+        }
+
+
+        p {
+            color: #f9f9f9;
+            font-size: 18px;
+            
+        }
+
+        #link {
+            font-size: 22px;
+        }
+
+.caroussel-caption h3 {
+  font-size: 4em;
+}
