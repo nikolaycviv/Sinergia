@@ -76,7 +76,7 @@ hr {
   }
 }
 
-.parallax {   
+.parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -258,7 +258,6 @@ hr {
   .jumboBanner .banner {
     font-size: 72px;
   }
-  
   .cloak {
     display: none;
   }
@@ -266,18 +265,15 @@ hr {
 
 @media screen and (max-width: 500px) {
   .inputInline {
-  width: 100%;
-  float: none;
+    width: 100%;
+    float: none;
   }
-  
   form input {
     margin-bottom: 5%; 
   }
-  
   input[name="submit"] {
     width: 100%;
   }
-  
   input[name="name"] {
       margin-right: 0%;
   }

@@ -1,12 +1,149 @@
 <!DOCTYPE html>
-<html lang="bg">
-    <head>
-        <title>Синергия +</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-    <h1>Сайтът е в процес на разработване! Благодарим Ви за търпението.</h1>
-    </body>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Синергия Плюс</title>
+    <!--<link rel="shortcut icon" href="./images/favicon.ico" />-->
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!--  Navigation Bar    -->
+    <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Синергия Плюс</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarButtons" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarButtons">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="navAbout" class="btn navbar-btn navActive">За нас</li>
+                    <li id="navServices" class="btn navbar-btn">Услуги</li>
+                    <li id="navContact" class="btn navbar-btn">Контакти</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--  Top page image    -->
+    <div class="parallaxTop">
+        <div class="jumboBanner shadow">
+            <h1 class="banner">Синергия Плюс</h1>
+            <h3 class="motto">Motto / Motto / Motto</h3>
+            <button id="bannerBtn" class="bannerBtn">LEARN MORE</button>
+        </div>
+    </div>
+    <!--  Main content   -->
+    <!--  About row      -->
+    <div id="aboutBlock" class="container">
+        <div id="aboutRow" class="row">
+            <div class="aboutLeft col-xs-12 col-sm-6 cloak">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="aboutImg col-md-9"></div>
+                </div>
+            </div>
+            <div class="aboutRight col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h2>Синергия Плюс</h2>
+                        <hr />
+                        <p>бла - бла - бла</p>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+    <!--  Services row      -->
+    <div id="servicesRow" class="parallaxSection">
+        <div class="shadowSection">
+            <h2>Услуги</h2>
+            <hr />
+        </div>
+    </div>
+    <div id="serviceBlocks" class="row">
+        <div class="container">
+            <div class="serviceBlock col-md-4">
+                <h1>Услуга 1</h1>
+                <img src="https://cdn0.iconfinder.com/data/icons/thinico/88/thinico-17-512.png" />
+                <p>бла - бла - бла</p>
+            </div>
+            <div class="serviceBlock col-md-4">
+                <h1>Услуга 2</h1>
+                <img src="https://cdn0.iconfinder.com/data/icons/thinico/88/thinico-17-512.png" />
+                <p>бла - бла - бла</p>
+            </div>
+            <div class="serviceBlock col-md-4">
+                <h1>Услуга 3</h1>
+                <img src="https://cdn0.iconfinder.com/data/icons/thinico/88/thinico-17-512.png" />
+                <p>бла - бла - бла</p>
+            </div>
+        </div>
+    </div>
+    <!--  Contact form      -->
+    <div id="phoneContact" class="phoneContact row">
+        <div class="container">
+            <h2>Свъежете се с нас на телефон: +359 889 11 77 42</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div id="contactRow" class="contactForm row">
+            <h2>Контактна форма</h2>
+            <hr />
+            <h3>Въведете своите данни и съобщение</h3>
+            <form name="contactForm" class="form-group" action="#" method="POST">
+                <input id="formName" name="name" class="inputInline form-control" type="text" placeholder="Име" required />
+                <input id="formEmail" name="email" class="inputInline form-control" type="email" placeholder="e-mail" required />
+                <textarea id="formMessage" name="message" class="form-control" type="text" placeholder="Съобщение" required></textarea>
+                <input name="submit" class="bannerBtn" type="submit" value="Изпратете съобщението" />
+            </form>
+        </div>
+    </div>
+    <!--  Contact info      -->
+    <div id="contactInfo" class="row">
+        <div class="container">
+            <div class="contactStack col-md-4">
+                <h4>Адрес</h4>
+                <p>ул. Цар Шишман №3</p>
+                <p>гр. Русе</p>
+            </div>
+            <div class="contactStack col-md-4">
+                <h4>Работно време</h4>
+                <p>понеделник - петък: 7:30 - 17:30</p>
+                <p>събота и неделя: почивни дни</p>
+            </div>
+            <div class="contactStack col-md-4">
+                <h4>Контакти</h4>
+                <p>тел.: +359 889 11 77 42</p>
+                <p>e-mail: office@sinergia-bg.com <br /> sinergia_plus@abv.bg</p>
+            </div>
+        </div>
+    </div>
+    <!--  Copyright    -->
+    <div id="copyright" class="row">
+        <div class="container">
+            <div id="socialBtn">
+                <a href="https://www.facebook.com/pg/SinergiaPlusCentre" target="blank" class="social"><img id="facebook"></a>
+                <!--<a href="#" class="social"><img id="twitter"></a>
+                <a href="#" class="social"><img id="linkedin"></a>-->
+            </div>
+            <p>&copy; 2017 Синергия Плюс. Всички права запазни. Designed and created by Nikolay Ivanov</p>
+        </div>
+    </div>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src="./js/index.js"></script>
+</body>
+
 </html>
