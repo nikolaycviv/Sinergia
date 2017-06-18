@@ -5,6 +5,7 @@ window.onload = function() {
     // Navigation bar buttons
     var about = document.querySelector("#navAbout");
     var services = document.querySelector("#navServices");
+    var courses = document.querySelector("#navCourses");
     var contact = document.querySelector("#navContact");
 
     about.onclick = function() {
@@ -14,6 +15,11 @@ window.onload = function() {
 
     services.onclick = function() {
         document.querySelector("#servicesRow").scrollIntoView();
+        window.scrollBy(0, -50);
+    };
+
+    courses.onclick = function() {
+        document.querySelector("#coursesInfo").scrollIntoView();
         window.scrollBy(0, -50);
     };
 
