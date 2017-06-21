@@ -1,53 +1,53 @@
 // All images taken from PEXELS.COM - free stock images
 "use strict";
-
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function(event) {
     // Navigation bar buttons
-    var about = document.querySelector("#navAbout");
-    var services = document.querySelector("#navServices");
-    var courses = document.querySelector("#navCourses");
-    var contact = document.querySelector("#navContact");
+    var sinergia = (function() {
+        var nodes = {}
+        var getNodes = (function() {
+            nodes.navigation = document.body.querySelector("#navigation");
+            nodes.about = nodes.navigation.querySelector("#navAbout");
+            nodes.services = nodes.navigation.querySelector("#navServices");
+            nodes.courses = nodes.navigation.querySelector("#navCourses");
+            nodes.contact = nodes.navigation.querySelector("#navContact");
+            nodes.formName = document.body.querySelector("#formName");
+            nodes.formEmail = document.body.querySelector("#formEmail");
+            nodes.formMessage = document.body.querySelector("#formMessage");
+            nodes.aboutRow = document.body.querySelector("#aboutRow");
+            nodes.serviceRow = document.body.querySelector("#servicesRow");
+            nodes.coursesInfo = document.body.querySelector("#coursesInfo");
+            nodes.phoneContact = document.body.querySelector("#phoneContact");
+            nodes.aboutRow = document.body.querySelector("#aboutRow");
+            nodes.bannerBtn = document.body.querySelector("#bannerBtn");
+        })();
 
-    about.onclick = function() {
-        document.querySelector("#aboutRow").scrollIntoView();
-        window.scrollBy(0, -50);
-    };
+        var callback = function() {
+            selector.scrollIntoView();
+            window.scrollBy(0, -50);
+        };
 
-    services.onclick = function() {
-        document.querySelector("#servicesRow").scrollIntoView();
-        window.scrollBy(0, -50);
-    };
+        var test = function(node, selector) {
+            node.addEventListener("click", function() {
+                selector.scrollIntoView();
+                window.scrollBy(0, -50);
+            })
+        };
+        test(nodes.about, nodes.aboutRow);
+        test(nodes.services, nodes.serviceRow);
+        test(nodes.courses, nodes.coursesInfo);
+        test(nodes.contact, nodes.phoneContact);
+        // Learn more jumbotron button jump to about div
+        test(nodes.bannerBtn, nodes.aboutRow);
 
-    courses.onclick = function() {
-        document.querySelector("#coursesInfo").scrollIntoView();
-        window.scrollBy(0, -50);
-    };
-
-    contact.onclick = function() {
-        document.querySelector("#phoneContact").scrollIntoView();
-        window.scrollBy(0, -50);
-    };
-
-    // Learn more jumbotron button jump to about div
-    var bannerBtn = document.querySelector("#bannerBtn");
-    bannerBtn.onclick = function() {
-        document.querySelector("#aboutRow").scrollIntoView();
-        window.scrollBy(0, -50);
-    };
-
-    // Clear input on click in the form
-    var formName = document.querySelector("#formName");
-    formName.onclick = function() {
-        formName.value = "";
-    };
-
-    var formEmail = document.querySelector("#formEmail");
-    formEmail.onclick = function() {
-        formEmail.value = "";
-    };
-
-    var formMessage = document.querySelector("#formMessage");
-    formMessage.onclick = function() {
-        formMessage.value = "";
-    };
-};
+        // Clear input on click in the form
+        nodes.formName.addEventListener("cluck", function() {
+            nodes.formName.value = "";
+        });
+        nodes.formEmail.addEventListener("cluck", function() {
+            nodes.formEmail.value = "";
+        });
+        nodes.formMessage.addEventListener("cluck", function() {
+            nodes.formMessage.value = "";
+        });
+    })();
+});
