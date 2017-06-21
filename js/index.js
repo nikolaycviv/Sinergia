@@ -2,9 +2,9 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function(event) {
     // Navigation bar buttons
-    var sinergia = (function() {
-        var nodes = {}
-        var getNodes = (function() {
+    (function() {
+        var nodes = {};
+        (function() {
             nodes.navigation = document.body.querySelector("#navigation");
             nodes.about = nodes.navigation.querySelector("#navAbout");
             nodes.services = nodes.navigation.querySelector("#navServices");
@@ -21,16 +21,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             nodes.bannerBtn = document.body.querySelector("#bannerBtn");
         })();
 
-        var callback = function() {
-            selector.scrollIntoView();
-            window.scrollBy(0, -50);
-        };
-
         var test = function(node, selector) {
             node.addEventListener("click", function() {
                 selector.scrollIntoView();
                 window.scrollBy(0, -50);
-            })
+            });
         };
         test(nodes.about, nodes.aboutRow);
         test(nodes.services, nodes.serviceRow);
@@ -40,13 +35,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         test(nodes.bannerBtn, nodes.aboutRow);
 
         // Clear input on click in the form
-        nodes.formName.addEventListener("cluck", function() {
+        nodes.formName.addEventListener("click", function() {
             nodes.formName.value = "";
         });
-        nodes.formEmail.addEventListener("cluck", function() {
+        nodes.formEmail.addEventListener("click", function() {
             nodes.formEmail.value = "";
         });
-        nodes.formMessage.addEventListener("cluck", function() {
+        nodes.formMessage.addEventListener("click", function() {
             nodes.formMessage.value = "";
         });
     })();

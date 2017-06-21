@@ -140,11 +140,11 @@
             <h2>Контактна форма</h2>
             <hr />
             <h3>Въведете своите данни и съобщение</h3>
-            <form name="contactForm" class="form-group" action="" method="POST">
-                <input id="formName" name="name" class="inputInline form-control" type="text" placeholder="Име" required />
-                <input id="formEmail" name="email" class="inputInline form-control" type="email" placeholder="e-mail" required />
-                <textarea id="formMessage" name="message" class="form-control" type="text" placeholder="Съобщение" required></textarea>
-                <input name="submit" class="bannerBtn" type="submit" value="Изпратете съобщението" />
+            <form class="form-group" action="/emailHandler.php" method="POST">
+                <input id="name" name="name" class="inputInline form-control" type="text" placeholder="Име" required />
+                <input id="email" name="email" class="inputInline form-control" type="email" placeholder="e-mail" required />
+                <textarea id="message" name="message" class="form-control" placeholder="Съобщение" required></textarea>
+                <input class="bannerBtn" type="submit" value="Изпратете съобщението" />
             </form>
         </div>
     </div>
@@ -185,7 +185,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 <script src="./js/index.js"></script>
-<script src="./mailSending.js"></script>
+<script src="./js/mailSending.js"></script>
 </body>
 
 </html>
