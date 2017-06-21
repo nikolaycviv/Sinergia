@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             nodes.services = nodes.navigation.querySelector("#navServices");
             nodes.courses = nodes.navigation.querySelector("#navCourses");
             nodes.contact = nodes.navigation.querySelector("#navContact");
-            nodes.formName = document.body.querySelector("#formName");
-            nodes.formEmail = document.body.querySelector("#formEmail");
-            nodes.formMessage = document.body.querySelector("#formMessage");
+            nodes.formName = document.body.querySelector("#name");
+            nodes.formEmail = document.body.querySelector("#email");
+            nodes.formMessage = document.body.querySelector("#message");
             nodes.aboutRow = document.body.querySelector("#aboutRow");
             nodes.serviceRow = document.body.querySelector("#servicesRow");
             nodes.coursesInfo = document.body.querySelector("#coursesInfo");
@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
             nodes.bannerBtn = document.body.querySelector("#bannerBtn");
         })();
 
-        var test = function(node, selector) {
+        var navigationShortcut = function(node, selector) {
             node.addEventListener("click", function() {
                 selector.scrollIntoView();
                 window.scrollBy(0, -50);
             });
         };
-        test(nodes.about, nodes.aboutRow);
-        test(nodes.services, nodes.serviceRow);
-        test(nodes.courses, nodes.coursesInfo);
-        test(nodes.contact, nodes.phoneContact);
+        navigationShortcut(nodes.about, nodes.aboutRow);
+        navigationShortcut(nodes.services, nodes.serviceRow);
+        navigationShortcut(nodes.courses, nodes.coursesInfo);
+        navigationShortcut(nodes.contact, nodes.phoneContact);
         // Learn more jumbotron button jump to about div
-        test(nodes.bannerBtn, nodes.aboutRow);
+        navigationShortcut(nodes.bannerBtn, nodes.aboutRow);
 
         // Clear input on click in the form
         nodes.formName.addEventListener("click", function() {
