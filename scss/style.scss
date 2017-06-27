@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;  
+  overflow-x: hidden;
 }
 
 .cloak {
@@ -267,6 +267,15 @@ hr {
   p {
     margin: 30px 0;
   }
+}
+
+// hide-show navigation divs on click
+.hide {
+   display: none;
+}
+
+.show {
+  display: block;
 }
 
 //Media queries

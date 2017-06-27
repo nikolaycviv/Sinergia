@@ -190,6 +190,12 @@ hr {
   #copyright p {
     margin: 30px 0; }
 
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
 @media screen and (max-width: 766px) {
   .jumboBanner .banner {
     font-size: 72px; }
