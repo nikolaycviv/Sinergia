@@ -5,20 +5,22 @@ var helpers = (function() {
             $('html, body').animate({
                 scrollTop: $(this).offset().top + 'px'
             }, 'fast');
-            return this; // for chaining...
+            // return this; // for chaining...
         }
     })(jQuery);
 
     function divVisibility(divId) {
-        var visibleDivId = null;
-        var divs = [main.nodes.aboutRow, main.nodes.services, main.nodes.coursesInfo];
+        var visibleDivId = null,
+            divs = [main.nodes.aboutRow, main.nodes.services, main.nodes.courses];
+
         if (visibleDivId === divId) {
             visibleDivId = null;
         } else {
             visibleDivId = divId;
         }
-        var i, divId;
-        for (i = 0; i < divs.length; i++) {
+
+        var divId;
+        for (let i = 0, len = divs.length; i < len; i++) {
             divId = divs[i];
             if (visibleDivId === null) {
                 divs.forEach(function(eachDiv) {

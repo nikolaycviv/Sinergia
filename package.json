@@ -4,7 +4,7 @@
   "description": "Sinergia Plus, Company web-site",
   "main": "index.html",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/"
+    "sass": "node-sass -w assets/scss/ -o assets/css/"
   },
   "repository": {
     "type": "git",

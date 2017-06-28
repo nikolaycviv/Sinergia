@@ -6,7 +6,7 @@ var main = (function() {
         n.navigation = document.body.querySelector("#navigation");
         n.about = n.navigation.querySelector("#navAbout");
         n.navServices = n.navigation.querySelector("#navServices");
-        n.courses = n.navigation.querySelector("#navCourses");
+        n.navCourses = n.navigation.querySelector("#navCourses");
         n.contact = n.navigation.querySelector("#navContact");
         // n.aboutRow = document.body.querySelector("#aboutRow");
         // n.serviceRow = document.body.querySelector("#servicesRow");
@@ -15,7 +15,8 @@ var main = (function() {
         // n.services = document.body.querySelector("#services");
         n.aboutRow = $("#aboutRow");
         n.serviceRow = $("#servicesRow");
-        n.coursesInfo = $("#coursesInfo");
+        n.courses = $("#courses");
+        // n.coursesInfo = $("#coursesInfo");
         n.phoneContact = $("#phoneContact");
         n.services = $("#services");
         n.home = document.querySelector('.navbar-brand');
@@ -39,9 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
         helpers.divVisibility(main.nodes.services);
         main.nodes.services.goTo();
     });
-    main.nodes.courses.addEventListener('click', function() {
-        helpers.divVisibility(main.nodes.coursesInfo);
-        main.nodes.coursesInfo.goTo();
+    main.nodes.navCourses.addEventListener('click', function() {
+        helpers.divVisibility(main.nodes.courses);
+        main.nodes.courses.goTo();
     });
     main.nodes.contact.addEventListener('click', function() {
         helpers.divVisibility(null);
