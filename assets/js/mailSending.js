@@ -12,23 +12,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
             'email': main.nodes.formEmail.value,
             'message': main.nodes.formMessage.value
         };
-        // Clear input on click in the form
-        // main.nodes.formName.addEventListener("click", function() {
-        main.nodes.formName.value = "";
-        // });
-        // main.nodes.formEmail.addEventListener("click", function() {
-        main.nodes.formEmail.value = "";
-        // });
-        // main.nodes.formMessage.addEventListener("click", function() {
-        main.nodes.formMessage.value = "";
-        // });
         $.ajax({
             type: "POST",
-            url: "../emailHandler.php",
+            url: "/emailHandler.php",
             data: data,
             dataType: "json",
             encode: true
         }).done(function(data) {
+            if (data.success) {
+                // Clear input on click in the form
+                main.nodes.formName.value = "";
+                main.nodes.formEmail.value = "";
+                main.nodes.formMessage.value = "";
+                // alert(data.message);
+            }
         });
         event.preventDefault();
     });

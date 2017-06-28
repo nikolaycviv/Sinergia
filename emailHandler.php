@@ -26,5 +26,5 @@ if (!empty($errors)) {
     $data['success'] = true;
     $data['message'] = 'Вашето съобщение беше изпратено!';
 }
-    echo json_encode($data);
+echo json_encode($data);
 ?>
