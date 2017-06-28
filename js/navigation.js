@@ -8,37 +8,46 @@ var main = (function() {
         n.navServices = n.navigation.querySelector("#navServices");
         n.courses = n.navigation.querySelector("#navCourses");
         n.contact = n.navigation.querySelector("#navContact");
-        n.aboutRow = document.body.querySelector("#aboutRow");
-        n.serviceRow = document.body.querySelector("#servicesRow");
-        n.coursesInfo = document.body.querySelector("#coursesInfo");
-        n.phoneContact = document.body.querySelector("#phoneContact");
-        n.services = document.body.querySelector("#services");
+        // n.aboutRow = document.body.querySelector("#aboutRow");
+        // n.serviceRow = document.body.querySelector("#servicesRow");
+        // n.coursesInfo = document.body.querySelector("#coursesInfo");
+        // n.phoneContact = document.body.querySelector("#phoneContact");
+        // n.services = document.body.querySelector("#services");
+        n.aboutRow = $("#aboutRow");
+        n.serviceRow = $("#servicesRow");
+        n.coursesInfo = $("#coursesInfo");
+        n.phoneContact = $("#phoneContact");
+        n.services = $("#services");
+        n.home = document.querySelector('.navbar-brand');
+        // n.container = document.body.querySelectorAll("div");
+        n.container = $('div');
         return n;
     })();
-
-    // Navigation Shortcut
-    var navFunctionsArray = new Map([
-        [nodes.about, nodes.aboutRow],
-        [nodes.navServices, nodes.serviceRow],
-        [nodes.courses, nodes.coursesInfo],
-        [nodes.contact, nodes.phoneContact]
-    ]);
-
-    document.addEventListener('DOMContentLoaded', function() {
-        helpers.navigationShortcut(navFunctionsArray);
-        var array = [nodes.aboutRow, nodes.services, nodes.coursesInfo];
-        nodes.about.addEventListener('click', helpers.toggleVisibility.bind(this, array)); // to do
-        nodes.navServices.addEventListener('click', helpers.toggleVisibility(array));  // to do
-        nodes.courses.addEventListener('click', helpers.toggleVisibility(array));  // to do
-        // nodes.about.addEventListener('click', helpers.toggleVisibility(array));
-        // nodes.about.addEventListener('click', function() {
-        //     nodes.aboutRow.style.display = 'block';
-        //     nodes.services.style.display = 'none';
-        //     nodes.coursesInfo.style.display = 'none';
-        // });
-    });
 
     return {
         nodes: nodes
     }
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Navigation Shortcut
+    main.nodes.about.addEventListener('click', function() {
+        helpers.divVisibility(main.nodes.aboutRow);
+        main.nodes.aboutRow.goTo();
+    });
+    main.nodes.navServices.addEventListener('click', function() {
+        helpers.divVisibility(main.nodes.services);
+        main.nodes.services.goTo();
+    });
+    main.nodes.courses.addEventListener('click', function() {
+        helpers.divVisibility(main.nodes.coursesInfo);
+        main.nodes.coursesInfo.goTo();
+    });
+    main.nodes.contact.addEventListener('click', function() {
+        helpers.divVisibility(null);
+        main.nodes.phoneContact.goTo();
+    });
+    main.nodes.home.addEventListener('click', function() {
+        helpers.divVisibility(null);
+    });
+});

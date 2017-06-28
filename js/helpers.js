@@ -1,32 +1,45 @@
+"use strict";
 var helpers = (function() {
-    var navigationShortcutHelper = function(node, selector) {
-        node.addEventListener("click", function() {
-            selector.scrollIntoView();
-            window.scrollBy(0, -50);
-        });
-    };
-    function navigationShortcut(array) {
-        for (let [key, value] of array) {
-            helpers.navigationShortcutHelper(key, value);
+    (function($) {
+        $.fn.goTo = function() {
+            $('html, body').animate({
+                scrollTop: $(this).offset().top + 'px'
+            }, 'fast');
+            return this; // for chaining...
         }
-    }
-    var toggleVisibility = function(divsArray) { // to do
-        for (let i = 0, len = divsArray.length; i < len; i++) {
-            if (this.target == divsArray[i]) { // check
-                if (divsArray[i].classList.contains('show')) {
-                    divsArray[i].classList.remove('show');
-                    divsArray[i].classList.add('hide');
-                }
-                else {
-                    divsArray[i].classList.remove('hide');
-                    divsArray[i].classList.add('show');
-                }
+    })(jQuery);
+
+    function divVisibility(divId) {
+        var visibleDivId = null;
+        var divs = [main.nodes.aboutRow, main.nodes.services, main.nodes.coursesInfo];
+        if (visibleDivId === divId) {
+            visibleDivId = null;
+        } else {
+            visibleDivId = divId;
+        }
+        var i, divId;
+        for (i = 0; i < divs.length; i++) {
+            divId = divs[i];
+            if (visibleDivId === null) {
+                divs.forEach(function(eachDiv) {
+                    // eachDiv.classList.add('show');
+                    eachDiv.addClass('show');
+                });
+                return;
+            }
+            if (visibleDivId === divId) {
+                // divId.classList.add('show');
+                // divId.classList.remove('hide');
+                divId.addClass('show').removeClass('hide');
+            } else {
+                // divId.classList.remove('show');
+                // divId.classList.add('hide');
+                divId.removeClass('show').addClass('hide');
             }
         }
     }
+
     return {
-        navigationShortcut: navigationShortcut,
-        navigationShortcutHelper: navigationShortcutHelper,
-        toggleVisibility: toggleVisibility
+        divVisibility: divVisibility,
     }
 })();

@@ -271,11 +271,13 @@ hr {
 
 // hide-show navigation divs on click
 .hide {
-   display: none;
+   // display: none;
+   visibility: hidden;
 }
 
 .show {
-  display: block;
+  // display: block;
+  visibility: visible;
 }
 
 //Media queries
