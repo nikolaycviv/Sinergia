@@ -115,6 +115,27 @@ hr {
   .serviceBlock p {
     font-size: 18px; }
 
+#coursesRow {
+  background-image: url("https://images.pexels.com/photos/247932/pexels-photo-247932.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  text-align: center;
+  color: white; }
+  #coursesRow h2 {
+    padding-top: 100px; }
+
+#coursesBlocks .container {
+  width: 94%; }
+
+.coursesStack {
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px; }
+  .coursesStack img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0; }
+  .coursesStack p {
+    font-size: 18px; }
+
 .phoneContact {
   background: #8eb640;
   text-align: center;
@@ -140,18 +161,6 @@ hr {
       margin-bottom: 2%; }
     .contactForm form input[name="name"] {
       margin-right: 2%; }
-
-#coursesInfo {
-  background: #131413;
-  min-height: 200px; }
-  #coursesInfo .coursesStack {
-    margin: 50px 0;
-    text-align: center;
-    font-size: 16px; }
-  #coursesInfo h4 {
-    color: #8eb640; }
-  #coursesInfo p {
-    color: #9d9d9d; }
 
 #contactInfo {
   background: #131413;

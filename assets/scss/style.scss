@@ -169,6 +169,34 @@ hr {
   }
 }
 
+//Education section
+#coursesRow {
+  background-image: url($servicesBack);
+  text-align: center;
+  color: white;
+  h2 {
+    padding-top: 100px;
+  }
+}
+#coursesBlocks {
+  .container {
+    width: 94%;
+  }
+}
+.coursesStack {
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
 //Contact form
 .phoneContact {
   background: $navGreen;
@@ -201,22 +229,6 @@ hr {
     input[name="name"] {
       margin-right: 2%;
     }
-  }
-}
-// Courses info
-#coursesInfo {
-  background: $backgroundGrey;
-  min-height: 200px;
-  .coursesStack {
-    margin: 50px 0;
-    text-align: center;
-    font-size: 16px;
-  }
-  h4 {
-    color: $navGreen;
-  }
-  p {
-    color: $navGrey;
   }
 }
 
