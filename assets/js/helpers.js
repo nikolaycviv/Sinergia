@@ -11,7 +11,7 @@ var helpers = (function() {
 
     function divVisibility(divId) {
         var visibleDivId = null,
-            divs = [main.nodes.aboutRow, main.nodes.services, main.nodes.courses];
+            divs = [main.nodes.aboutRow, main.nodes.services, main.nodes.coursesInfo];
 
         if (visibleDivId === divId) {
             visibleDivId = null;

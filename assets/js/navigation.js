@@ -15,8 +15,8 @@ var main = (function() {
         // n.services = document.body.querySelector("#services");
         n.aboutRow = $("#aboutRow");
         n.serviceRow = $("#servicesRow");
-        n.courses = $("#courses");
-        // n.coursesInfo = $("#coursesInfo");
+        // n.courses = $("#courses");
+        n.coursesInfo = $("#coursesInfo");
         n.phoneContact = $("#phoneContact");
         n.services = $("#services");
         n.home = document.querySelector('.navbar-brand');
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
         main.nodes.services.goTo();
     });
     main.nodes.navCourses.addEventListener('click', function() {
-        helpers.divVisibility(main.nodes.courses);
-        main.nodes.courses.goTo();
+        helpers.divVisibility(main.nodes.coursesInfo);
+        main.nodes.coursesInfo.goTo();
     });
     main.nodes.contact.addEventListener('click', function() {
         helpers.divVisibility(null);
