@@ -1,9 +1,9 @@
-//colors
+// colors
 $navGrey: #9d9d9d;
 $navGreen: #8eb640;
 $backgroundGrey: #131413;
 
-//images
+// images
 $bannerImg: "https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb";
 $servicesBack: "https://images.pexels.com/photos/247932/pexels-photo-247932.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb";
 // $aboutImg: "https://images.pexels.com/photos/59628/pexels-photo-59628.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb";
@@ -11,7 +11,7 @@ $linkedinIcon: "https://pbs.twimg.com/profile_images/614583061448036352/CBpFkPaz
 $twitterIcon: "http://www.freeiconspng.com/uploads/twitter-icon-twitter-icon-7.png";
 $facebookIcon: "http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico";
 
-//Global classes
+// Global classes
 html {
   height: 100%;
 }
@@ -35,6 +35,7 @@ hr {
     border: none;
     background: $navGreen;
     color: white;
+    margin-top: 10px;
     padding: 10px 20px;
     &:hover {
     background: darken($navGreen, 20%);
@@ -45,8 +46,8 @@ hr {
   width: 49%;
   float: left;
 }
-//DOM elements
-//Navigation bar
+// DOM elements
+// Navigation bar
 .navbar-btn {
   padding-top: 13px;
   margin: 0 10px 0 0;
@@ -106,7 +107,7 @@ hr {
   min-height: 250px;
 }
 
-//Top banner & jumbotron
+// Top banner & jumbotron
 .jumboBanner {
   text-align: center;
   .banner {
@@ -123,7 +124,7 @@ hr {
   }  
 }
 
-//About section
+// About section
 #aboutBlock {
   width: 94%;
 }
@@ -141,7 +142,7 @@ hr {
   }
 }
 
-//Services section
+// Services section
 #servicesRow {
   background-image: url($servicesBack);
   text-align: center;
@@ -169,7 +170,7 @@ hr {
   }
 }
 
-//Education section
+// Education section
 #coursesRow {
   background-image: url($servicesBack);
   text-align: center;
@@ -197,7 +198,35 @@ hr {
   }
 }
 
-//Contact form
+// Carriers section
+#carriersRow {
+  background-image: url($servicesBack);
+  text-align: center;
+  color: white;
+  h2 {
+    padding-top: 100px;
+  }
+}
+#carriersBlocks {
+  .container {
+    width: 94%;
+  }
+}
+.carriersStack {
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+// Contact form
 .phoneContact {
   background: $navGreen;
   text-align: center;
@@ -232,7 +261,7 @@ hr {
   }
 }
 
-//Contact info
+// Contact info
 #contactInfo {
   background: $backgroundGrey;
   min-height: 200px;
@@ -249,7 +278,7 @@ hr {
   }
 }
 
-//Copyright
+// Copyright
 #copyright {
   background: $navGreen;
   min-height: 125px;
@@ -292,7 +321,7 @@ hr {
   visibility: visible;
 }
 
-//Media queries
+// Media queries
 @media screen and (max-width: 766px) {
   .jumboBanner .banner {
     font-size: 72px;

@@ -4,6 +4,7 @@ var main = (function() {
     var nodes = (function() {
         var n = {};
         n.navigation = document.body.querySelector("#navigation");
+        n.bannerBtn = document.getElementById("bannerBtn");
         n.about = n.navigation.querySelector("#navAbout");
         n.news = n.navigation.querySelector("#navNews");
         n.navAdvantages = n.navigation.querySelector("#navAdvantages");
@@ -17,6 +18,7 @@ var main = (function() {
         n.newsBlock = $("#newsBlock");
         n.serviceRow = $("#servicesRow");
         n.courses = $("#courses");
+        n.carriers = $("#carriers");
         n.phoneContact = $("#phoneContact");
         n.services = $("#services");
         n.home = document.querySelector('.navbar-brand');
@@ -27,5 +29,5 @@ var main = (function() {
 
     return {
         nodes: nodes
-    }
+    };
 })();

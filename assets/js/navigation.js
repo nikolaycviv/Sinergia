@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
         helpers.divVisibility(main.nodes.aboutBlock);
         main.nodes.aboutBlock.goTo();
     });
+    main.nodes.bannerBtn.addEventListener('click', function() {
+        helpers.divVisibility(main.nodes.aboutBlock);
+        main.nodes.aboutBlock.goTo();
+    });
     main.nodes.news.addEventListener('click', function() {
         helpers.divVisibility(main.nodes.newsBlock);
         main.nodes.newsBlock.goTo();
@@ -29,10 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
     //     helpers.divVisibility(main.nodes.services);
     //     main.nodes.services.goTo();
     // });
-    // main.nodes.navCarriers.addEventListener('click', function() {
-    //     helpers.divVisibility(main.nodes.services);
-    //     main.nodes.services.goTo();
-    // });
+    main.nodes.navCarriers.addEventListener('click', function() {
+        helpers.divVisibility(main.nodes.carriers);
+        main.nodes.carriers.goTo();
+    });
     main.nodes.contact.addEventListener('click', function() {
         helpers.divVisibility(null);
         main.nodes.phoneContact.goTo();

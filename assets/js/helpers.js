@@ -6,20 +6,18 @@ var helpers = (function() {
                 scrollTop: $(this).offset().top + 'px'
             }, 'fast');
             // return this; // for chaining...
-        }
+        };
     })(jQuery);
 
     function divVisibility(divId) {
-        var visibleDivId = null,
-            divs = [main.nodes.aboutBlock, main.nodes.newsBlock, main.nodes.services, main.nodes.courses];
+        var visibleDivId = null;
+        var divs = [main.nodes.aboutBlock, main.nodes.newsBlock, main.nodes.services, main.nodes.courses, main.nodes.carriers];
 
         if (visibleDivId === divId) {
             visibleDivId = null;
         } else {
             visibleDivId = divId;
         }
-
-        var divId;
         for (let i = 0, len = divs.length; i < len; i++) {
             divId = divs[i];
             if (visibleDivId === null) {
@@ -42,6 +40,6 @@ var helpers = (function() {
     }
 
     return {
-        divVisibility: divVisibility,
-    }
+        divVisibility: divVisibility
+    };
 })();
