@@ -1,4 +1,5 @@
 "use strict";
+/* global jQuery, main */
 var helpers = (function() {
     (function($) {
         $.fn.goTo = function() {
@@ -53,11 +54,11 @@ var helpers = (function() {
             helpers.toggleActive(e.target);
             nodeAffect.goTo();
         });
-    }
+    };
 
     return {
         divVisibility: divVisibility,
         toggleActive: toggleActive,
-        navigationListener: navigationListener,
+        navigationListener: navigationListener
     };
 })();

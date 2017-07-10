@@ -1,4 +1,5 @@
 "use strict";
+/* global main, helpers */
 document.addEventListener('DOMContentLoaded', function() {
     // Navigation Shortcut
     helpers.navigationListener(main.nodes.navAbout, main.nodes.aboutBlock);

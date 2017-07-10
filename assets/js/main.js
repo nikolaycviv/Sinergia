@@ -1,5 +1,6 @@
 "use strict";
-var main = (function() {
+/* global $ */
+window.main = (function() {
     var nodes = (function() {
         var n = {};
         n.navigation = document.body.querySelector("#navigation");
@@ -22,7 +23,6 @@ var main = (function() {
         n.teamBlock = $('#teamBlock');
         n.carriersBlock = $("#carriersBlock");
         n.phoneContact = $("#phoneContact");
-        
         n.home = document.querySelector('.navbar-brand');
         n.container = $('div');
         n.divs = [n.aboutBlock, n.newsBlock, n.advantagesBlock, n.servicesBlock, n.coursesBlock, n.diplomasBlock, n.teamBlock, n.carriersBlock];
