@@ -9,9 +9,8 @@ var helpers = (function() {
         };
     })(jQuery);
 
-    function divVisibility(divId) {
+    function divVisibility(divId = null, divs = main.nodes.divs) {
         var visibleDivId = null;
-        var divs = [main.nodes.aboutBlock, main.nodes.newsBlock, main.nodes.services, main.nodes.courses, main.nodes.carriers];
 
         if (visibleDivId === divId) {
             visibleDivId = null;
@@ -37,9 +36,19 @@ var helpers = (function() {
                 divId.removeClass('show').addClass('hide');
             }
         }
-    }
+    };
+
+    function toggleActive(node, arrayNodes = main.nodes.navDivs) {
+        node.classList.add('navActive');
+        for (let i = 0, len = arrayNodes.length; i < len; i++) {
+            if (node != arrayNodes[i]) {
+                arrayNodes[i].classList.remove('navActive');
+            }
+        }
+    };
 
     return {
-        divVisibility: divVisibility
+        divVisibility: divVisibility,
+        toggleActive: toggleActive
     };
 })();

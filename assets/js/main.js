@@ -1,6 +1,5 @@
 "use strict";
 var main = (function() {
-    // Navigation bar buttons
     var nodes = (function() {
         var n = {};
         n.navigation = document.body.querySelector("#navigation");
@@ -18,12 +17,13 @@ var main = (function() {
         n.newsBlock = $("#newsBlock");
         n.serviceRow = $("#servicesRow");
         n.courses = $("#courses");
-        n.carriers = $("#carriers");
+        n.carriersBlock = $("#carriersBlock");
         n.phoneContact = $("#phoneContact");
         n.services = $("#services");
         n.home = document.querySelector('.navbar-brand');
-        // n.container = document.body.querySelectorAll("div");
         n.container = $('div');
+        n.divs = [n.aboutBlock, n.newsBlock, n.services, n.courses, n.carriersBlock];
+        n.navDivs = [n.about, n.news, n.navAdvantages, n.navServices, n.navCourses, n.navDiplomas, n.navTeam, n.navCarriers, n.contact];
         return n;
     })();
 
