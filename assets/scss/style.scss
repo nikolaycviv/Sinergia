@@ -45,6 +45,14 @@ hr {
     float: left;
 }
 
+.font-bold {
+    font-weight: bold;
+}
+
+.font-inline {
+    display: inline;
+}
+
 // DOM elements
 // Navigation bar
 .navbar-btn {
@@ -478,10 +486,10 @@ hr {
         float: none!important;
         margin-top: 7.5px;
     }
-    .navbar-nav > li {
+    .navbar-nav>li {
         float: none;
     }
-    .navbar-nav > li > a {
+    .navbar-nav>li>a {
         padding-top: 10px;
         padding-bottom: 10px;
     }

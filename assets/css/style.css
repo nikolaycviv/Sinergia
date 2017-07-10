@@ -26,6 +26,12 @@ hr {
   width: 49%;
   float: left; }
 
+.font-bold {
+  font-weight: bold; }
+
+.font-inline {
+  display: inline; }
+
 .navbar-btn {
   padding-top: 13px;
   margin: 0 10px 0 0;
