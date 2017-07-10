@@ -47,8 +47,17 @@ var helpers = (function() {
         }
     };
 
+    function navigationListener(nodeClick, nodeAffect = null) {
+        nodeClick.addEventListener('click', function(e) {
+            helpers.divVisibility(nodeAffect);
+            helpers.toggleActive(e.target);
+            nodeAffect.goTo();
+        });
+    }
+
     return {
         divVisibility: divVisibility,
-        toggleActive: toggleActive
+        toggleActive: toggleActive,
+        navigationListener: navigationListener,
     };
 })();

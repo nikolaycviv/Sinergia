@@ -4,8 +4,8 @@ var main = (function() {
         var n = {};
         n.navigation = document.body.querySelector("#navigation");
         n.bannerBtn = document.getElementById("bannerBtn");
-        n.about = n.navigation.querySelector("#navAbout");
-        n.news = n.navigation.querySelector("#navNews");
+        n.navAbout = n.navigation.querySelector("#navAbout");
+        n.navNews = n.navigation.querySelector("#navNews");
         n.navAdvantages = n.navigation.querySelector("#navAdvantages");
         n.navServices = n.navigation.querySelector("#navServices");
         n.navCourses = n.navigation.querySelector("#navCourses");
@@ -15,15 +15,18 @@ var main = (function() {
         n.contact = n.navigation.querySelector("#navContact");
         n.aboutBlock = $("#aboutBlock");
         n.newsBlock = $("#newsBlock");
-        n.serviceRow = $("#servicesRow");
-        n.courses = $("#courses");
+        n.advantagesBlock = $('#advantagesBlock');
+        n.servicesBlock = $("#servicesBlock");
+        n.coursesBlock = $("#coursesBlock");
+        n.diplomasBlock = $('#diplomasBlock');
+        n.teamBlock = $('#teamBlock');
         n.carriersBlock = $("#carriersBlock");
         n.phoneContact = $("#phoneContact");
-        n.services = $("#services");
+        
         n.home = document.querySelector('.navbar-brand');
         n.container = $('div');
-        n.divs = [n.aboutBlock, n.newsBlock, n.services, n.courses, n.carriersBlock];
-        n.navDivs = [n.about, n.news, n.navAdvantages, n.navServices, n.navCourses, n.navDiplomas, n.navTeam, n.navCarriers, n.contact];
+        n.divs = [n.aboutBlock, n.newsBlock, n.advantagesBlock, n.servicesBlock, n.coursesBlock, n.diplomasBlock, n.teamBlock, n.carriersBlock];
+        n.navDivs = [n.navAbout, n.navNews, n.navAdvantages, n.navServices, n.navCourses, n.navDiplomas, n.navTeam, n.navCarriers, n.contact];
         return n;
     })();
 

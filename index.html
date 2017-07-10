@@ -21,11 +21,11 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">Начало</a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarButtons" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarButtons">
                     <ul class="nav navbar-nav navbar-right">
@@ -57,18 +57,19 @@
         <!--  About row      -->
         <div id="aboutBlock" class="container show">
             <div id="aboutRow" class="row">
-                <div class="aboutLeft col-xs-12 col-sm-6 cloak">
+                <div class="aboutLeft col-xs-12 col-sm-2 cloak">
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="aboutImg col-md-9"></div>
                     </div>
                 </div>
-                <div class="aboutRight col-xs-12 col-sm-6">
+                <div class="aboutRight col-xs-12 col-sm-8">
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-10">
                             <h2>Синергия Плюс</h2>
                             <hr />
-                            <p>Учебен център "СИНЕРГИЯ ПЛЮС" провежда корпоративни квалификационни обучения на заети лица, за
+                            <p class="text-justify">Учебен център "СИНЕРГИЯ ПЛЮС" провежда корпоративни квалификационни обучения на заети лица, за
                                 големи търговски вериги и производствени предприятия. Работим за промяната към общество,
                                 в което хора, групи и организации работят заедно и активно участват в развитието на България,
                                 предоставяйки образователни услуги на деца и възрастни, консултиране, подготовка и управление
@@ -76,41 +77,48 @@
                                 по ОП „Развитие на човешките ресурси” като доставчик на обучение с ваучери. Курсовете за
                                 деца от 1-ви до 4-ти клас се провеждат в Детски център "МРАВЧО" създаден към "СИНЕРГИЯ ПЛЮС",
                                 за да превърне посещенията, на вашето дете при нас, в истинско приключение.</p>
-                            <p><b>Кариери</b>
-                                <br />Ако Вие търсите среда на доказани професионалисти, които са горди да видят резултатите
-                                от своите усилия и ако Вие искате да се усъвършенствате, обичате динамичната и променяща
-                                се среда и сте част от тези, които правят промените реални и успешни, то тогава можете да
-                                се присъедините към нашия преподавателски и административен екип.</p>
+                            <p>
                         </div>
                     </div>
-                    <div class="col-md-3"></div>
                 </div>
             </div>
         </div>
         <!--  News row      -->
-        <!-- TO DO!!! -->
-        <div id="newsBlock" class="container show">
-            <div id="newsRow" class="row">
-                <div class="aboutLeft col-xs-12 col-sm-6 cloak">
-                    <div class="row">
-                        <div class="col-md-3"></div>
-                        <!--<div class="aboutImg col-md-9"></div>-->
+        <div id="newsBlock" class="show">
+            <div id="newsRow" class="parallaxSection">
+                <div class="shadowSection">
+                    <h2>Новини</h2>
+                    <hr />
+                </div>
+            </div>
+            <div id="newsBlocks" class="row">
+                <div class="container">
+                    <div class="col-md-1"></div>
+                    <div class="newsBlock col-md-10">
+                        <p>********************</p>
                     </div>
                 </div>
-                <div class="newsRight col-xs-12 col-sm-6">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h2>Новини</h2>
-                            <hr />
-                            <p>********************.</p>
-                        </div>
+            </div>
+        </div>
+        <!--  Advantages row      -->
+        <div id="advantagesBlock" class="show">
+            <div id="advantagesRow" class="parallaxSection">
+                <div class="shadowSection">
+                    <h2>Предимства</h2>
+                    <hr />
+                </div>
+            </div>
+            <div id="advantagesBlocks" class="row">
+                <div class="container">
+                    <div class="col-md-1"></div>
+                    <div class="advantagesBlock col-md-10">
+                        <p>предимства бла-бла</p>
                     </div>
-                    <div class="col-md-3"></div>
                 </div>
             </div>
         </div>
         <!--  Services row      -->
-        <div id="services" class="show">
+        <div id="servicesBlock" class="show">
             <div id="servicesRow" class="parallaxSection">
                 <div class="shadowSection">
                     <h2>Услуги</h2>
@@ -140,7 +148,7 @@
             </div>
         </div>
         <!--  Courses info      -->
-        <div id="courses" class="show">
+        <div id="coursesBlock" class="show">
             <div id="coursesRow" class="parallaxSection">
                 <div class="shadowSection">
                     <h2>Обучения</h2>
@@ -167,6 +175,40 @@
                 </div>
             </div>
         </div>
+        <!--  Diplomas row      -->
+        <div id="diplomasBlock" class="show">
+            <div id="diplomasRow" class="parallaxSection">
+                <div class="shadowSection">
+                    <h2>Дипломи</h2>
+                    <hr />
+                </div>
+            </div>
+            <div id="diplomasBlocks" class="row">
+                <div class="container">
+                    <div class="col-md-1"></div>
+                    <div class="diplomasBlock col-md-10">
+                        <p>Дипломи бла-бла</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Team row      -->
+        <div id="teamBlock" class="show">
+            <div id="teamRow" class="parallaxSection">
+                <div class="shadowSection">
+                    <h2>Екип</h2>
+                    <hr />
+                </div>
+            </div>
+            <div id="teamBlocks" class="row">
+                <div class="container">
+                    <div class="col-md-1"></div>
+                    <div class="teamBlock col-md-10">
+                        <p>Екип бла-бла</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--  Carriers info      -->
         <div id="carriersBlock" class="show">
             <div id="carriersRow" class="parallaxSection">
@@ -177,12 +219,14 @@
             </div>
             <div id="cariersBlocks" class="row">
                 <div class="container">
-                    <div class="cariersStack col-md-12">
+                    <div class="col-xs-1"></div>
+                    <div class="cariersStack col-xs-10">
                         <p class="text-center">Ако Вие търсите среда на доказани професионалисти, които са горди да видят резултатите от своите
                             усилия и ако Вие искате да се усъвършенствате, обичате динамичната и променяща се среда и сте
                             част от тези, които правят промените реални и успешни, то тогава можете да се присъедините към
                             нашия преподавателски и административен екип.</p>
                     </div>
+                    <div class="col-xs-1"></div>
                 </div>
             </div>
         </div>
