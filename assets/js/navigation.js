@@ -1,7 +1,7 @@
 "use strict";
 /* global main, helpers */
-document.addEventListener('DOMContentLoaded', function() {
-    // Navigation Shortcut
+document.addEventListener('DOMContentLoaded', () => {
+    // navigation shortcut
     helpers.navigationListener(main.nodes.navAbout, main.nodes.aboutBlock);
     helpers.navigationListener(main.nodes.bannerBtn, main.nodes.aboutBlock);
     helpers.navigationListener(main.nodes.navNews, main.nodes.newsBlock);

@@ -1,30 +1,31 @@
 "use strict";
-document.addEventListener("DOMContentLoaded", function(event) {
+/* global main */
+document.addEventListener("DOMContentLoaded", () => {
     main.nodes.contactForm = document.body.querySelector("#contactFormID");
     main.nodes.formGroup = main.nodes.contactForm.querySelector(".form-group");
     main.nodes.formName = main.nodes.formGroup[0];
     main.nodes.formEmail = main.nodes.formGroup[1];
     main.nodes.formMessage = main.nodes.formGroup[2];
 
-    main.nodes.formGroup.addEventListener('submit', function(event) {
+    main.nodes.formGroup.addEventListener('submit', (event) => {
         var data = {
-            'name': main.nodes.formName.value,
             'email': main.nodes.formEmail.value,
-            'message': main.nodes.formMessage.value
+            'message': main.nodes.formMessage.value,
+            'name': main.nodes.formName.value
         };
         $.ajax({
-            type: "POST",
-            url: "/emailHandler.php",
             data: data,
             dataType: "json",
-            encode: true
-        }).done(function(data) {
-            if (data.success) {
-                // Clear input on click in the form
+            encode: true,
+            type: "POST",
+            url: "/emailHandler.php"
+        }).done((response) => {
+            if (response.success) {
+                // clear input on click in the form
                 main.nodes.formName.value = "";
                 main.nodes.formEmail.value = "";
                 main.nodes.formMessage.value = "";
-                // alert(data.message);
+                // alert(response.message);
             }
         });
         event.preventDefault();
