@@ -151,6 +151,9 @@ hr {
         background-repeat: no-repeat;
         background-size: 90% 90%;
     }
+    p {
+        font-size: 18px;
+    }
 }
 
 // News section
@@ -349,7 +352,7 @@ hr {
     }
 }
 
-.carriersStack {
+.carriersBlock {
     text-align: center;
     margin: 20px auto 50px auto;
     padding: 25px;
