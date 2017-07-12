@@ -1,8 +1,8 @@
 "use strict";
 /* global main */
-var helpers = (function() {
-    (function($) {
-        $.fn.goTo = function() {
+const helpers = (function () {
+    (function ($) {
+        $.fn.goTo = function () {
             $('html, body').animate({
                 scrollTop: `${$(this).offset().top}px`
             }, 'fast');
@@ -16,7 +16,7 @@ var helpers = (function() {
      * @returns {void}
      */
     function divVisibility(divId = null, divs = main.nodes.divs) {
-        var div = '',
+        let div = '',
             visibleDivId = null;
 
         if (visibleDivId === divId) {

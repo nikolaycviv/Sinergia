@@ -1,8 +1,8 @@
 "use strict";
 /* global $ */
 window.main = (function() {
-    var nodes = (function() {
-        var n = {};
+    const nodes = (function() {
+        const n = {};
         n.navigation = document.body.querySelector("#navigation");
         n.bannerBtn = document.getElementById("bannerBtn");
         n.navAbout = n.navigation.querySelector("#navAbout");
@@ -27,7 +27,7 @@ window.main = (function() {
         n.container = $('div');
         n.navDivs = [n.navAbout, n.navNews, n.navAdvantages, n.navServices, n.navCourses, n.navDiplomas, n.navTeam, n.navCarriers, n.contact];
         n.divs = [n.aboutBlock, n.newsBlock, n.advantagesBlock, n.servicesBlock, n.coursesBlock, n.diplomasBlock, n.teamBlock, n.carriersBlock];
-        // only while deeloping
+        // only while developing
         n.navDivsTemp = [n.navAbout, n.navNews, n.navCarriers, n.contact];
         n.divsTemp = [n.aboutBlock, n.newsBlock, n.carriersBlock];
         return n;
