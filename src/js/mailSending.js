@@ -1,19 +1,19 @@
 /* global $ */
-const main = require('./main.js')
+const main = require('./main.js');
 
 document.addEventListener('DOMContentLoaded', () => {
-  main.nodes.contactForm = document.body.querySelector('#contactFormID')
-  main.nodes.formGroup = main.nodes.contactForm.querySelector('.form-group')
-  main.nodes.formName = main.nodes.formGroup[0]
-  main.nodes.formEmail = main.nodes.formGroup[1]
-  main.nodes.formMessage = main.nodes.formGroup[2]
+  main.nodes.contactForm = document.body.querySelector('#contactFormID');
+  main.nodes.formGroup = main.nodes.contactForm.querySelector('.form-group');
+  main.nodes.formName = main.nodes.formGroup[0];
+  main.nodes.formEmail = main.nodes.formGroup[1];
+  main.nodes.formMessage = main.nodes.formGroup[2];
 
   main.nodes.formGroup.addEventListener('submit', (event) => {
-    var data = {
+    const data = {
       'email': main.nodes.formEmail.value,
       'message': main.nodes.formMessage.value,
       'name': main.nodes.formName.value
-    }
+    };
     $.ajax({
       data: data,
       dataType: 'json',
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }).done((response) => {
       if (response.success) {
         // clear input on click in the form
-        main.nodes.formName.value = ''
-        main.nodes.formEmail.value = ''
-        main.nodes.formMessage.value = ''
+        main.nodes.formName.value = '';
+        main.nodes.formEmail.value = '';
+        main.nodes.formMessage.value = '';
         // alert(response.message);
       }
-    })
-    event.preventDefault()
-  })
-})
+    });
+    event.preventDefault();
+  });
+});

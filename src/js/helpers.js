@@ -1,15 +1,15 @@
 /* global jQuery */
-const main = require('./main.js')
+const main = require('./main.js');
 
 module.exports = (function () {
   (function ($) {
     $.fn.goTo = function () {
       $('html, body').animate({
         scrollTop: `${$(this).offset().top}px`
-      }, 'fast')
+      }, 'fast');
       // return this; // for chaining...
-    }
-  })(jQuery)
+    };
+  })(jQuery);
 
   /**
    * @param  {number} divId=null
@@ -17,31 +17,31 @@ module.exports = (function () {
    * @returns {void}
    */
   function divVisibility (divId = null, divs = main.nodes.divs) {
-    var div = ''
-    var visibleDivId = null
+    var div = '';
+    var visibleDivId = null;
 
     if (visibleDivId === divId) {
-      visibleDivId = null
+      visibleDivId = null;
     } else {
-      visibleDivId = divId
+      visibleDivId = divId;
     }
-    for (let i = 0, len = divs.length; i < len; i++) {
-      div = divs[i]
+    for (let i = 0, len = divs.length; i < len; i += 1) {
+      div = divs[i];
       if (visibleDivId === null) {
         divs.forEach((eachDiv) => {
           // eachDiv.classList.add('show')
-          eachDiv.addClass('show')
-        })
-        return
+          eachDiv.addClass('show');
+        });
+        return;
       }
       if (visibleDivId === div) {
         // divId.classList.add('show')
         // divId.classList.remove('hide')
-        div.addClass('show').removeClass('hide')
+        div.addClass('show').removeClass('hide');
       } else {
         // divId.classList.remove('show')
         // divId.classList.add('hide')
-        div.removeClass('show').addClass('hide')
+        div.removeClass('show').addClass('hide');
       }
     }
   }
@@ -52,10 +52,10 @@ module.exports = (function () {
    * @returns {void}
    */
   function toggleActive (node, arrayNodes = main.nodes.navDivs) {
-    node.classList.add('navActive')
-    for (let i = 0, len = arrayNodes.length; i < len; i++) {
+    node.classList.add('navActive');
+    for (let i = 0, len = arrayNodes.length; i < len; i += 1) {
       if (node !== arrayNodes[i]) {
-        arrayNodes[i].classList.remove('navActive')
+        arrayNodes[i].classList.remove('navActive');
       }
     }
   }
@@ -67,15 +67,15 @@ module.exports = (function () {
    */
   function navigationListener (nodeClick, nodeAffect = null) {
     nodeClick.addEventListener('click', (e) => {
-      divVisibility(nodeAffect)
-      toggleActive(e.target)
-      nodeAffect.goTo()
-    })
+      divVisibility(nodeAffect);
+      toggleActive(e.target);
+      nodeAffect.goTo();
+    });
   }
 
   return {
     divVisibility: divVisibility,
     navigationListener: navigationListener,
     toggleActive: toggleActive
-  }
-})()
+  };
+})();

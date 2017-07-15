@@ -1,40 +1,37 @@
-var CleanWebpackPlugin = require('clean-webpack-plugin')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var path = require('path')
-
-var extractPlugin = new ExtractTextPlugin({
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const extractPlugin = new ExtractTextPlugin({
   filename: 'main.css'
-})
+});
 
 module.exports = {
   entry: './src/js/index.js',
   // entry: './src/js/index2.js',
   module: {
-    rules: [{
-      test: /\.js$/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: ['es2015']
-        }
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015']
+            }
+          }
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: extractPlugin.extract({
+          use: ['css-loader', 'sass-loader']
+        })
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader']
       }
-        // ,
-        // {
-        //     loader: "eslint-loader"
-        // }
-      ]
-    },
-    {
-      test: /\.scss$/,
-      use: extractPlugin.extract({
-        use: ['css-loader', 'sass-loader']
-      })
-    },
-    {
-      test: /\.html$/,
-      use: ['html-loader']
-    }
       // ,
       // {
       //     test: /\.(jpg|png)$/,
@@ -61,4 +58,4 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist'])
   ]
-}
+};

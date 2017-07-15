@@ -1,4 +1,4 @@
-import '../scss/style.scss'
+import '../scss/style.scss';
 
-require('./navigation.js')
-require('./mailSending.js')
+require('./navigation.js');
+require('./mailSending.js');
