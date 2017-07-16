@@ -1,17 +1,19 @@
-const helpers = require('./helpers.js');
-const main = require('./main.js');
+import {helpers} from './helpers';
+import {nodes} from './nodes';
 
-document.addEventListener('DOMContentLoaded', () => {
-  // navigation shortcut
-  helpers.navigationListener(main.nodes.navAbout, main.nodes.aboutBlock);
-  helpers.navigationListener(main.nodes.bannerBtn, main.nodes.aboutBlock);
-  helpers.navigationListener(main.nodes.navNews, main.nodes.newsBlock);
-  helpers.navigationListener(main.nodes.navAdvantages, main.nodes.advantagesBlock);
-  helpers.navigationListener(main.nodes.navServices, main.nodes.servicesBlock);
-  helpers.navigationListener(main.nodes.navCourses, main.nodes.coursesBlock);
-  helpers.navigationListener(main.nodes.navDiplomas, main.nodes.diplomasBlock);
-  helpers.navigationListener(main.nodes.navTeam, main.nodes.teamBlock);
-  helpers.navigationListener(main.nodes.navCarriers, main.nodes.carriersBlock);
-  helpers.navigationListener(main.nodes.contact, main.nodes.phoneContact);
-  helpers.navigationListener(main.nodes.home);
-});
+export default (function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    // navigation shortcut
+    helpers.navigationListener(nodes.navAbout, nodes.aboutBlock);
+    helpers.navigationListener(nodes.bannerBtn, nodes.aboutBlock);
+    helpers.navigationListener(nodes.navNews, nodes.newsBlock);
+    helpers.navigationListener(nodes.navAdvantages, nodes.advantagesBlock);
+    helpers.navigationListener(nodes.navServices, nodes.servicesBlock);
+    helpers.navigationListener(nodes.navCourses, nodes.coursesBlock);
+    helpers.navigationListener(nodes.navDiplomas, nodes.diplomasBlock);
+    helpers.navigationListener(nodes.navTeam, nodes.teamBlock);
+    helpers.navigationListener(nodes.navCarriers, nodes.carriersBlock);
+    helpers.navigationListener(nodes.contact, nodes.phoneContact);
+    helpers.navigationListener(nodes.home);
+  });
+})();

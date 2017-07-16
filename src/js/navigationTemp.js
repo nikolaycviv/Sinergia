@@ -1,12 +1,14 @@
-const helpers = require('./helpersTemp.js');
-const main = require('./main.js');
+import {helpers} from './helpers';
+import {nodes} from './nodes';
 
-document.addEventListener('DOMContentLoaded', () => {
-  // navigation shortcut
-  helpers.navigationListener(main.nodes.navAbout, main.nodes.aboutBlock);
-  helpers.navigationListener(main.nodes.bannerBtn, main.nodes.aboutBlock);
-  helpers.navigationListener(main.nodes.navNews, main.nodes.newsBlock);
-  helpers.navigationListener(main.nodes.navCarriers, main.nodes.carriersBlock);
-  helpers.navigationListener(main.nodes.contact, main.nodes.phoneContact);
-  helpers.navigationListener(main.nodes.home);
-});
+export default (function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    // navigation shortcut
+    helpers.navigationListener(nodes.navAbout, nodes.aboutBlock);
+    helpers.navigationListener(nodes.bannerBtn, nodes.aboutBlock);
+    helpers.navigationListener(nodes.navNews, nodes.newsBlock);
+    helpers.navigationListener(nodes.navCarriers, nodes.carriersBlock);
+    helpers.navigationListener(nodes.contact, nodes.phoneContact);
+    helpers.navigationListener(nodes.home);
+  });
+})();

@@ -1,7 +1,7 @@
 /* global jQuery */
-const main = require('./main.js');
+import {nodes} from './nodes';
 
-module.exports = (function () {
+const helpers = (function () {
   (function ($) {
     $.fn.goTo = function () {
       $('html, body').animate({
@@ -13,10 +13,10 @@ module.exports = (function () {
 
   /**
    * @param  {number} divId=null
-   * @param  {array} divs=main.nodes.divs
+   * @param  {array} divs=nodes.divs
    * @returns {void}
    */
-  function divVisibility (divId = null, divs = main.nodes.divsTemp) {
+  function divVisibility (divId = null, divs = nodes.divsTemp) {
     let div = '';
     let visibleDivId = null;
 
@@ -48,10 +48,10 @@ module.exports = (function () {
 
   /**
    * @param  {object} node=*selected node*
-   * @param  {array} arrayNodes=main.nodes.navDivs
+   * @param  {array} arrayNodes=nodes.navDivs
    * @returns {void}
    */
-  function toggleActive (node, arrayNodes = main.nodes.navDivsTemp) {
+  function toggleActive (node, arrayNodes = nodes.navDivsTemp) {
     node.classList.add('navActive');
     for (let i = 0, len = arrayNodes.length; i < len; i += 1) {
       if (node !== arrayNodes[i]) {
@@ -74,8 +74,8 @@ module.exports = (function () {
   }
 
   return {
-    divVisibility: divVisibility,
-    navigationListener: navigationListener,
-    toggleActive: toggleActive
+    navigationListener
   };
 })();
+
+export {helpers};

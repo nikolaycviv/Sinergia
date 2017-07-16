@@ -1,4 +1,3 @@
 import '../scss/style.scss';
-
-require('./navigationTemp.js');
-require('./mailSending.js');
+import './navigationTemp';
+import './mailSending';
