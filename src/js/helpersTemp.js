@@ -1,5 +1,7 @@
 /* global jQuery */
-import {nodes} from './nodes';
+import {
+  nodes
+} from './nodes';
 
 const helpers = (function () {
   (function ($) {
@@ -69,7 +71,9 @@ const helpers = (function () {
     nodeClick.addEventListener('click', (e) => {
       divVisibility(nodeAffect);
       toggleActive(e.target);
-      nodeAffect.goTo();
+      if (nodeAffect !== null) {
+        nodeAffect.goTo();
+      }
     });
   }
 
@@ -78,4 +82,6 @@ const helpers = (function () {
   };
 })();
 
-export {helpers};
+export {
+  helpers
+};

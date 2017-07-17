@@ -18,22 +18,22 @@ const nodes = (function () {
   n.navTeam = n.navigation.querySelector('#navTeam');
   n.navCarriers = n.navigation.querySelector('#navCarriers');
   n.contact = n.navigation.querySelector('#navContact');
-  n.aboutBlock = $('#aboutBlock');
-  n.newsBlock = $('#newsBlock');
-  n.advantagesBlock = $('#advantagesBlock');
-  n.servicesBlock = $('#servicesBlock');
-  n.coursesBlock = $('#coursesBlock');
-  n.diplomasBlock = $('#diplomasBlock');
-  n.teamBlock = $('#teamBlock');
-  n.carriersBlock = $('#carriersBlock');
-  n.phoneContact = $('#phoneContact');
+  n.$aboutBlock = $('#aboutBlock');
+  n.$newsBlock = $('#newsBlock');
+  n.$advantagesBlock = $('#advantagesBlock');
+  n.$servicesBlock = $('#servicesBlock');
+  n.$coursesBlock = $('#coursesBlock');
+  n.$diplomasBlock = $('#diplomasBlock');
+  n.$teamBlock = $('#teamBlock');
+  n.$carriersBlock = $('#carriersBlock');
+  n.$phoneContact = $('#phoneContact');
   n.home = document.querySelector('.navbar-brand');
-  n.container = $('div');
+  n.$container = $('div');
   n.navDivs = [n.navAbout, n.navNews, n.navAdvantages, n.navServices, n.navCourses, n.navDiplomas, n.navTeam, n.navCarriers, n.contact];
-  n.divs = [n.aboutBlock, n.newsBlock, n.advantagesBlock, n.servicesBlock, n.coursesBlock, n.diplomasBlock, n.teamBlock, n.carriersBlock];
+  n.divs = [n.$aboutBlock, n.$newsBlock, n.$advantagesBlock, n.$servicesBlock, n.$coursesBlock, n.$diplomasBlock, n.$teamBlock, n.$carriersBlock];
   // only while deeloping
   n.navDivsTemp = [n.navAbout, n.navNews, n.navCarriers, n.contact];
-  n.divsTemp = [n.aboutBlock, n.newsBlock, n.carriersBlock];
+  n.divsTemp = [n.$aboutBlock, n.$newsBlock, n.$carriersBlock];
   return n;
 })();
 
