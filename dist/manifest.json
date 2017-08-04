@@ -1,0 +1,30 @@
+{
+  "background_color": "#2196F3",
+  "theme_color": "#2196F3",
+  "display": "standalone",
+  "orientation": "landscape",
+  "short_name": "SinergiaPlus",
+  "name": "Educational center 'SinergiaPlus'",
+  "icons": [{
+      "src": "src/images/google.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "src/images/google2.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "src/images/google3.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "src/images/google4.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html"
+}

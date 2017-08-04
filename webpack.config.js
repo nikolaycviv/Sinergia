@@ -53,8 +53,8 @@ module.exports = {
   plugins: [
     extractPlugin,
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-      // template: './src/indexTemp.html'
+      template: './src/views/index.html'
+      // template: './src/views/indexTemp.html'
     }),
     new CleanWebpackPlugin(['dist'])
   ]
