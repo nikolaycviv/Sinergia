@@ -1,7 +1,5 @@
 /* global jQuery */
-import {
-  nodes
-} from './nodes';
+import {nodes} from './nodes';
 const helpers = (function () {
   (function ($) {
     $.fn.goTo = function () {
