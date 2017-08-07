@@ -11,517 +11,524 @@ $twitterIcon: "http://www.freeiconspng.com/uploads/twitter-icon-twitter-icon-7.p
 $facebookIcon: "http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico";
 // Global classes
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .cloak {
-    display: block;
+  display: block;
 }
 
 hr {
-    width: 70px;
-    border-color: $navGreen;
-    border-width: 2px;
-    height: 2px;
+  width: 70px;
+  border-color: $navGreen;
+  border-width: 2px;
+  height: 2px;
 }
 
 .bannerBtn {
-    border: none;
-    background: $navGreen;
-    color: white;
-    margin-top: 10px;
-    padding: 10px 20px;
-    &:hover {
-        background: darken($navGreen, 20%);
-    }
+  border: none;
+  background: $navGreen;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  &:hover {
+    background: darken($navGreen, 20%);
+  }
 }
 
 .inputInline {
-    width: 49%;
-    float: left;
+  width: 49%;
+  float: left;
 }
 
 .font-bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .font-inline {
-    display: inline;
+  display: inline;
 }
 
 // DOM elements
 // Navigation bar
 .navbar-btn {
-    padding-top: 13px;
-    margin: 0 10px 0 0;
-    color: $navGrey;
-    font-size: 18px;
-    &:hover {
-        color: $navGreen;
-    }
+  padding-top: 13px;
+  margin: 0 10px 0 0;
+  color: $navGrey;
+  font-size: 18px;
+  &:hover {
+    color: $navGreen;
+  }
 }
 
 .navbar {
-    background: $backgroundGrey;
-    .navbar-toggle {
-        border-color: $navGreen;
-        .icon-bar {
-            background-color: $navGreen;
-        }
+  background: $backgroundGrey;
+  .navbar-toggle {
+    border-color: $navGreen;
+    .icon-bar {
+      background-color: $navGreen;
     }
-    .navbar-brand {
-        color: $navGreen;
-        &:hover {
-            color: $navGreen;
-        }
+  }
+  .navbar-brand {
+    color: $navGreen;
+    &:hover {
+      color: $navGreen;
     }
-    .navActive {
-        color: $navGreen;
-    }
+  }
+  .navActive {
+    color: $navGreen;
+  }
 }
 
 .parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
 }
 
 .parallaxTop {
-    @extend .parallax;
-    background-image: url($bannerImg);
-    min-height: 100vh;
+  @extend .parallax;
+  background-image: url($bannerImg);
+  min-height: 100vh;
 }
 
 .parallaxSection {
-    @extend .parallax;
-    min-height: 250px;
+  @extend .parallax;
+  min-height: 250px;
 }
 
 .shadow {
-    background: rgba(0, 0, 0, 0.8);
-    min-height: 100vh;
-    width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  min-height: 100vh;
+  width: 100%;
 }
 
 .shadowSection {
-    @extend .shadow;
-    min-height: 250px;
+  @extend .shadow;
+  min-height: 250px;
 }
 
 // Top banner & jumbotron
 .jumboBanner {
+  text-align: center;
+  .banner {
+    color: white;
+    padding-top: 30vh;
     text-align: center;
-    .banner {
-        color: white;
-        padding-top: 30vh;
-        text-align: center;
-        font-family: sans-serif;
-        font-size: 112px;
-        margin-top: 0;
-    }
-    .motto {
-        color: white;
-        margin: 50px auto;
-    }
+    font-family: sans-serif;
+    font-size: 112px;
+    margin-top: 0;
+  }
+  .motto {
+    color: white;
+    margin: 50px auto;
+  }
 }
 
 // About section
 #aboutBlock {
-    width: 94%;
+  width: 94%;
 }
 
 #aboutRow,
 .aboutLeft,
 .aboutRight,
 .aboutImg {
-    min-height: 400px;
-    margin: 20px auto;
-    hr {
-        margin-left: 0;
-        text-align: left;
-    }
-    .aboutImg {
-        // background-image: url($aboutImg);
-        background-repeat: no-repeat;
-        background-size: 90% 90%;
-    }
-    p {
-        font-size: 18px;
-    }
+  min-height: 400px;
+  margin: 20px auto;
+  hr {
+    margin-left: 0;
+    text-align: left;
+  }
+  .aboutImg {
+    // background-image: url($aboutImg);
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 // News section
 #newsRow {
-    background-image: url($servicesBack);
-    text-align: center;
-    color: white;
-    h2 {
-        padding-top: 100px;
-    }
+  background-image: url($servicesBack);
+  text-align: center;
+  color: white;
+  h2 {
+    padding-top: 100px;
+  }
 }
 
 #newsBlocks {
-    .container {
-        width: 94%;
-    }
+  .container {
+    width: 94%;
+  }
 }
 
 .newsBlock {
-    text-align: center;
-    margin: 20px auto 50px auto;
-    padding: 25px;
-    img {
-        width: 100px;
-        height: 100px;
-        margin: 10px 0 20px 0;
-    }
-    p {
-        font-size: 18px;
-    }
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 // Advantages section
 #advantagesRow {
-    background-image: url($servicesBack);
-    text-align: center;
-    color: white;
-    h2 {
-        padding-top: 100px;
-    }
+  background-image: url($servicesBack);
+  text-align: center;
+  color: white;
+  h2 {
+    padding-top: 100px;
+  }
 }
 
 #advantagesBlocks {
-    .container {
-        width: 94%;
-    }
+  .container {
+    width: 94%;
+  }
 }
 
 .advantagesBlock {
-    text-align: center;
-    margin: 20px auto 50px auto;
-    padding: 25px;
-    img {
-        width: 100px;
-        height: 100px;
-        margin: 10px 0 20px 0;
-    }
-    p {
-        font-size: 18px;
-    }
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 // Services section
 #servicesRow {
-    background-image: url($servicesBack);
-    text-align: center;
-    color: white;
-    h2 {
-        padding-top: 100px;
-    }
+  background-image: url($servicesBack);
+  text-align: center;
+  color: white;
+  h2 {
+    padding-top: 100px;
+  }
 }
 
 #serviceBlocks {
-    .container {
-        width: 94%;
-    }
+  .container {
+    width: 94%;
+  }
 }
 
 .serviceBlock {
-    text-align: center;
-    margin: 20px auto 50px auto;
-    padding: 25px;
-    img {
-        width: 100px;
-        height: 100px;
-        margin: 10px 0 20px 0;
-    }
-    p {
-        font-size: 18px;
-    }
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 // Education section
 #coursesRow {
-    background-image: url($servicesBack);
-    text-align: center;
-    color: white;
-    h2 {
-        padding-top: 100px;
-    }
+  background-image: url($servicesBack);
+  text-align: center;
+  color: white;
+  h2 {
+    padding-top: 100px;
+  }
 }
 
 #coursesBlocks {
-    .container {
-        width: 94%;
-    }
+  .container {
+    width: 94%;
+  }
 }
 
 .coursesStack {
-    text-align: center;
-    margin: 20px auto 50px auto;
-    padding: 25px;
-    img {
-        width: 100px;
-        height: 100px;
-        margin: 10px 0 20px 0;
-    }
-    p {
-        font-size: 18px;
-    }
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 // Diplomas section
 #diplomasRow {
-    background-image: url($servicesBack);
-    text-align: center;
-    color: white;
-    h2 {
-        padding-top: 100px;
-    }
+  background-image: url($servicesBack);
+  text-align: center;
+  color: white;
+  h2 {
+    padding-top: 100px;
+  }
 }
 
 #diplomasBlocks {
-    .container {
-        width: 94%;
-    }
+  .container {
+    width: 94%;
+  }
 }
 
 .diplomasBlock {
-    text-align: center;
-    margin: 20px auto 50px auto;
-    padding: 25px;
-    img {
-        width: 100px;
-        height: 100px;
-        margin: 10px 0 20px 0;
-    }
-    p {
-        font-size: 18px;
-    }
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 // Team section
 #teamRow {
-    background-image: url($servicesBack);
-    text-align: center;
-    color: white;
-    h2 {
-        padding-top: 100px;
-    }
+  background-image: url($servicesBack);
+  text-align: center;
+  color: white;
+  h2 {
+    padding-top: 100px;
+  }
 }
 
 #teamBlocks {
-    .container {
-        width: 94%;
-    }
+  .container {
+    width: 94%;
+  }
 }
 
 .teamBlock {
-    text-align: center;
-    margin: 20px auto 50px auto;
-    padding: 25px;
-    img {
-        width: 100px;
-        height: 100px;
-        margin: 10px 0 20px 0;
-    }
-    p {
-        font-size: 18px;
-    }
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 // Carriers section
 #carriersRow {
-    background-image: url($servicesBack);
-    text-align: center;
-    color: white;
-    h2 {
-        padding-top: 100px;
-    }
+  background-image: url($servicesBack);
+  text-align: center;
+  color: white;
+  h2 {
+    padding-top: 100px;
+  }
 }
 
 #carriersBlocks {
-    .container {
-        width: 94%;
-    }
+  .container {
+    width: 94%;
+  }
 }
 
 .carriersBlock {
-    text-align: center;
-    margin: 20px auto 50px auto;
-    padding: 25px;
-    img {
-        width: 100px;
-        height: 100px;
-        margin: 10px 0 20px 0;
-    }
-    p {
-        font-size: 18px;
-    }
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 25px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 // Contact form
 .phoneContact {
-    background: $navGreen;
-    text-align: center;
-    color: white;
-    min-height: 200px;
-    h2 {
-        margin: 100px 0;
-    }
+  background: $navGreen;
+  text-align: center;
+  color: white;
+  min-height: 200px;
+  h2 {
+    margin: 100px 0;
+  }
 }
 
 #formMessage {
-    margin-bottom: 2%;
-    height: 100px;
-    max-width: 100%;
+  margin-bottom: 2%;
+  height: 100px;
+  max-width: 100%;
 }
 
 .contactForm {
-    margin: 50px auto;
-    text-align: center;
-    h2 {
-        margin: 0 auto;
+  margin: 50px auto;
+  text-align: center;
+  h2 {
+    margin: 0 auto;
+  }
+  form {
+    width: 75%;
+    margin: 50px auto 0 auto;
+    input {
+      margin-bottom: 2%;
     }
-    form {
-        width: 75%;
-        margin: 50px auto 0 auto;
-        input {
-            margin-bottom: 2%;
-        }
-        input[name="name"] {
-            margin-right: 2%;
-        }
+    input[name="name"] {
+      margin-right: 2%;
     }
+  }
 }
 
 // Contact info
 #contactInfo {
-    background: $backgroundGrey;
-    min-height: 200px;
-    .contactStack {
-        margin: 50px 0;
-        text-align: center;
-        font-size: 16px;
-    }
-    h4 {
-        color: $navGreen;
-    }
-    p {
-        color: $navGrey;
-    }
+  background: $backgroundGrey;
+  min-height: 200px;
+  .contactStack {
+    margin: 50px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+  h4 {
+    color: $navGreen;
+  }
+  p {
+    color: $navGrey;
+  }
+}
+
+// map
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
 }
 
 // Copyright
 #copyright {
-    background: $navGreen;
-    min-height: 125px;
-    text-align: center;
-    color: white;
-    #facebook {
-        background-image: url($facebookIcon);
-        background-size: cover;
-        background-repeat: no-repeat;
-    } //   #twitter {
-    //     background-image: url($twitterIcon);
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    //   }
-    //   #linkedin {
-    //     background-image: url($linkedinIcon);
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    //   }
-    .social,
-    img {
-        height: 50px;
-        width: 50px;
-        border: none;
-        margin: 30px 5px 0px 5px;
-    }
-    p {
-        margin: 30px 0;
-    }
+  background: $navGreen;
+  min-height: 125px;
+  text-align: center;
+  color: white;
+  #facebook {
+    background-image: url($facebookIcon);
+    background-size: cover;
+    background-repeat: no-repeat;
+  } //   #twitter {
+  //     background-image: url($twitterIcon);
+  //     background-size: cover;
+  //     background-repeat: no-repeat;
+  //   }
+  //   #linkedin {
+  //     background-image: url($linkedinIcon);
+  //     background-size: cover;
+  //     background-repeat: no-repeat;
+  //   }
+  .social,
+  img {
+    height: 50px;
+    width: 50px;
+    border: none;
+    margin: 30px 5px 0px 5px;
+  }
+  p {
+    margin: 30px 0;
+  }
 }
 
 // hide-show navigation divs on click
 .hide {
-    // display: none;
-    visibility: hidden;
+  // display: none;
+  visibility: hidden;
 }
 
 .show {
-    // display: block;
-    visibility: visible;
+  // display: block;
+  visibility: visible;
 }
 
 // Media queries
 // nav-bar collapses when display-width decreases
 @media screen and (max-width: 1200px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-left,
-    .navbar-right {
-        float: none !important;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .collapse.in {
-        display: block !important;
-    }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,
+  .navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in {
+    display: block !important;
+  }
 }
 
 @media screen and (max-width: 766px) {
-    .jumboBanner .banner {
-        font-size: 72px;
-    }
-    .cloak {
-        display: none;
-    }
+  .jumboBanner .banner {
+    font-size: 72px;
+  }
+  .cloak {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .inputInline {
-        width: 100%;
-        float: none;
-    }
-    form input {
-        margin-bottom: 5%;
-    }
-    input[name="submit"] {
-        width: 100%;
-    }
-    input[name="name"] {
-        margin-right: 0%;
-    }
+  .inputInline {
+    width: 100%;
+    float: none;
+  }
+  form input {
+    margin-bottom: 5%;
+  }
+  input[name="submit"] {
+    width: 100%;
+  }
+  input[name="name"] {
+    margin-right: 0%;
+  }
 }
