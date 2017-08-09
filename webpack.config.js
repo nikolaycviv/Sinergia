@@ -1,6 +1,8 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const path = require('path');
 const extractPlugin = new ExtractTextPlugin({
   filename: 'main.css'
@@ -52,10 +54,21 @@ module.exports = {
   },
   plugins: [
     extractPlugin,
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: './src/views/index.html'
       // template: './src/views/indexTemp.html'
     }),
-    new CleanWebpackPlugin(['dist'])
+    new ManifestPlugin({
+      writeToFileEmit: true
+    }),
+    new SWPrecacheWebpackPlugin({
+      cacheId: 'sinergiaPlus-cache-v1',
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: 'sw.js',
+      minify: true,
+      navigateFallback: `${path.resolve(__dirname, 'dist/index.html')}`,
+      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/]
+    })
   ]
 };
