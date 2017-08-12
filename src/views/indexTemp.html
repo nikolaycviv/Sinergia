@@ -267,6 +267,8 @@
         </div>
       </div>
     </div>
+    <!--  Google Maps    -->
+    <div id="map"></div>
     <!--  Copyright    -->
     <div id="copyright" class="row">
       <div class="container">
@@ -280,6 +282,23 @@
       </div>
     </div>
   </div>
+  <script>
+    function initMap() {
+      var loc = {
+        lat: 43.841800,
+        lng: 25.949468
+      };
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: loc,
+        zoom: 15
+      });
+      var marker = new google.maps.Marker({
+        map: map,
+        position: loc
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzLn6M-AjLz2hoe_mo_YfLTyafe-45TEk&callback=initMap"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 </body>
