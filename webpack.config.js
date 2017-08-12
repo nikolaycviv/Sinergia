@@ -61,6 +61,9 @@ module.exports = {
       // template: './src/views/indexTemp.html'
     }),
     new ManifestPlugin({
+      seed: {
+        short_name: 'Sinergia+'
+      },
       writeToFileEmit: true
     }),
     new SWPrecacheWebpackPlugin({
