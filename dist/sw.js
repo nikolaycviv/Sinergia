@@ -1,1 +1,73 @@
-"use strict";function setOfCachedUrls(e){return e.keys().then(function(e){return e.map(function(e){return e.url})}).then(function(e){return new Set(e)})}var precacheConfig=[["bundle.js","494475dd0654ecda4e3b1a2620450b9f"],["icons-26362772636ba3c726fef914b5ff29dc/.cache","3b0b16e7ed644f59aa6305c1d07190d6"],["icons-26362772636ba3c726fef914b5ff29dc/android-chrome-144x144.png","71069862e4430db353de04301aee65a0"],["icons-26362772636ba3c726fef914b5ff29dc/android-chrome-192x192.png","d71ccf62c2ce5efccca91d12c0676f67"],["icons-26362772636ba3c726fef914b5ff29dc/android-chrome-256x256.png","ea813b21196fb7fffbe37fac7f62b4fa"],["icons-26362772636ba3c726fef914b5ff29dc/android-chrome-36x36.png","14b75adfe6bcb7442dec1a23076be76b"],["icons-26362772636ba3c726fef914b5ff29dc/android-chrome-384x384.png","3c6874b579d40c55ad86b7ea1a2b4004"],["icons-26362772636ba3c726fef914b5ff29dc/android-chrome-48x48.png","55f4e6a4861897cc8e589ca77f3d020b"],["icons-26362772636ba3c726fef914b5ff29dc/android-chrome-512x512.png","71d3d101a0b771727d2eab955c779218"],["icons-26362772636ba3c726fef914b5ff29dc/android-chrome-72x72.png","6136c0e2f35e282dc3ccfa97d42c007b"],["icons-26362772636ba3c726fef914b5ff29dc/android-chrome-96x96.png","b1e02cd5eeead8329f1bd302a50454d0"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-114x114.png","746cd16bdd234dc2a817f59c9d500aac"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-120x120.png","aa800e70f92b5089cc21b60303b29b58"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-144x144.png","9d136ed78f47a82488891a9ecc93068f"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-152x152.png","e5a092356c2b6971479cc2c12433b6de"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-167x167.png","878b90f4801fcabe10c66bdd447f317f"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-180x180.png","639b35cdabee02bfde6a80c99a0999df"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-57x57.png","9a0f3ca6bbf1b90a9343413bc0559d04"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-60x60.png","da55ba120fe59c430ffa0d6c391d4a63"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-72x72.png","60b0998cfa3434f66f4edc0bcd772a80"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-76x76.png","71b22ec9b8abc5f8ca69f2f0fdbc5e8e"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon-precomposed.png","639b35cdabee02bfde6a80c99a0999df"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-icon.png","639b35cdabee02bfde6a80c99a0999df"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-1182x2208.png","647ae8a67122b90a3c3370376937cfc8"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-1242x2148.png","9df5fbdaef5df5dc1adb7de1620036bb"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-1496x2048.png","825f3f5ccda0210398d663fceac6d570"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-1536x2008.png","b7a0eb2e336f3f4cb4ebcd84428e606f"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-320x460.png","075016da7f1d95cc30c0ee76f6886cf3"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-640x1096.png","fc3589e4fef67c7b3b3c1496439180ff"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-640x920.png","e30ca99e5a45b72c2a2661953afb54e1"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-748x1024.png","05fb70a41f126b93d27439c3c205cd46"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-750x1294.png","ac28451d0552e17ef9afaa971a5ac1be"],["icons-26362772636ba3c726fef914b5ff29dc/apple-touch-startup-image-768x1004.png","f708b0f8cdced4963878a0f4d600da20"],["icons-26362772636ba3c726fef914b5ff29dc/favicon-16x16.png","0aa35759f75dd30f4dfe757bb0613645"],["icons-26362772636ba3c726fef914b5ff29dc/favicon-32x32.png","c92f559da01fa2368b926ba44141abad"],["icons-26362772636ba3c726fef914b5ff29dc/favicon.ico","3b69eb312b98b1f072e75f915be25e26"],["icons-26362772636ba3c726fef914b5ff29dc/firefox_app_128x128.png","f0d74dc3d60b1ca8e1973ef3f81de28e"],["icons-26362772636ba3c726fef914b5ff29dc/firefox_app_512x512.png","91e0c0a15984940c8a63b3cc27518df9"],["icons-26362772636ba3c726fef914b5ff29dc/firefox_app_60x60.png","4b576dd7b867377840fd188b93363f24"],["icons-26362772636ba3c726fef914b5ff29dc/manifest.json","389d4212f7a5bfcf69ae5f1778c737b7"],["icons-26362772636ba3c726fef914b5ff29dc/manifest.webapp","70b38a6f5c1d0a6f10a11ce41232d00e"],["index.html","2e42e94338246a6cf8e14f4faa226bfe"],["main.css","947c0462d1835f0582f97df299876937"]],cacheName="sw-precache-v3-sinergiaPlus-cache-v1-"+(self.registration?self.registration.scope:""),ignoreUrlParametersMatching=[/^utm_/],addDirectoryIndex=function(e,c){var f=new URL(e);return"/"===f.pathname.slice(-1)&&(f.pathname+=c),f.toString()},cleanResponse=function(e){return e.redirected?("body"in e?Promise.resolve(e.body):e.blob()).then(function(c){return new Response(c,{headers:e.headers,status:e.status,statusText:e.statusText})}):Promise.resolve(e)},createCacheKey=function(e,c,f,a){var n=new URL(e);return a&&n.pathname.match(a)||(n.search+=(n.search?"&":"")+encodeURIComponent(c)+"="+encodeURIComponent(f)),n.toString()},isPathWhitelisted=function(e,c){if(0===e.length)return!0;var f=new URL(c).pathname;return e.some(function(e){return f.match(e)})},stripIgnoredUrlParameters=function(e,c){var f=new URL(e);return f.hash="",f.search=f.search.slice(1).split("&").map(function(e){return e.split("=")}).filter(function(e){return c.every(function(c){return!c.test(e[0])})}).map(function(e){return e.join("=")}).join("&"),f.toString()},hashParamName="_sw-precache",urlsToCacheKeys=new Map(precacheConfig.map(function(e){var c=e[0],f=e[1],a=new URL(c,self.location),n=createCacheKey(a,hashParamName,f,/\.\w{8}\./);return[a.toString(),n]}));self.addEventListener("install",function(e){e.waitUntil(caches.open(cacheName).then(function(e){return setOfCachedUrls(e).then(function(c){return Promise.all(Array.from(urlsToCacheKeys.values()).map(function(f){if(!c.has(f)){var a=new Request(f,{credentials:"same-origin"});return fetch(a).then(function(c){if(!c.ok)throw new Error("Request for "+f+" returned a response with status "+c.status);return cleanResponse(c).then(function(c){return e.put(f,c)})})}}))})}).then(function(){return self.skipWaiting()}))}),self.addEventListener("activate",function(e){var c=new Set(urlsToCacheKeys.values());e.waitUntil(caches.open(cacheName).then(function(e){return e.keys().then(function(f){return Promise.all(f.map(function(f){if(!c.has(f.url))return e.delete(f)}))})}).then(function(){return self.clients.claim()}))}),self.addEventListener("fetch",function(e){if("GET"===e.request.method){var c,f=stripIgnoredUrlParameters(e.request.url,ignoreUrlParametersMatching);(c=urlsToCacheKeys.has(f))||(f=addDirectoryIndex(f,"index.html"),c=urlsToCacheKeys.has(f));!c&&"navigate"===e.request.mode&&isPathWhitelisted([],e.request.url)&&(f=new URL("/Users/Nick/Sites/Sinergia/dist/index.html",self.location).toString(),c=urlsToCacheKeys.has(f)),c&&e.respondWith(caches.open(cacheName).then(function(e){return e.match(urlsToCacheKeys.get(f)).then(function(e){if(e)return e;throw Error("The cached response that was expected is missing.")})}).catch(function(c){return console.warn('Couldn\'t serve response for "%s" from cache: %O',e.request.url,c),fetch(e.request)}))}});
+var CACHE_NAME = 'sinergiaPlus-cache-v1';
+var urlsToCache = [
+  '/',
+  '/main.css',
+  '/bundle.js'
+];
+self.addEventListener('install', (event) => {
+  // console.log('installing service worker');
+
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) =>
+      // console.log('Opened cache', cache);
+      cache.addAll(urlsToCache), (err) => {
+      // console.log('somrthing went wrong: ', err);
+    })
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  var cacheWhitelist = [''];
+
+  // console.log('activating service worker');
+
+  event.waitUntil(
+    caches.keys().then((cacheNames) => Promise.all(
+      cacheNames.map((cacheName) => {
+        if (cacheWhitelist.indexOf(cacheName) === -1) {
+          return caches.delete(cacheName);
+        }
+      })
+    ))
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      // iMPORTANT: Clone the request. A request is a stream and
+      // can only be consumed once. Since we are consuming this
+      // once by cache and once by the browser for fetch, we need
+      // to clone the response.
+      var fetchRequest = event.request.clone();
+
+      // cache hit - return response
+      if (response) {
+        return response;
+      }
+
+
+      return fetch(fetchRequest).then(
+        (res) => {
+          // iMPORTANT: Clone the response. A response is a stream
+          // and because we want the browser to consume the response
+          // as well as the cache consuming the response, we need
+          // to clone it so we have two streams.
+          var responseToCache = res.clone();
+
+          // check if we received a valid response
+          if (!res || res.status !== 200 || res.type !== 'basic') {
+            return res;
+          }
+
+          caches.open(CACHE_NAME).
+            then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+
+          return res;
+        }
+      );
+    })
+  );
+});
