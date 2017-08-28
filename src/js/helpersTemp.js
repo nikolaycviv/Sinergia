@@ -15,10 +15,10 @@ const helpers = (function () {
 
   /**
    * @param  {number} divId=null
-   * @param  {array} divs=nodes.divs
+   * @param  {array} divs=nodes.divsTemp
    * @returns {void}
    */
-  function divVisibility (divId = null, divs = nodes.divsTemp) {
+  function divVisibility (divId, divs) {
     let div = '';
     let visibleDivId = null;
 
@@ -64,12 +64,12 @@ const helpers = (function () {
 
   /**
    * @param  {object} nodeClick=*clicked node*
-   * @param  {object} nodeAffect=null
+   * @param  {object} nodeAffect=*clicked node*||null
    * @returns {void}
    */
   function navigationListener (nodeClick, nodeAffect = null) {
     nodeClick.addEventListener('click', (e) => {
-      divVisibility(nodeAffect);
+      divVisibility(nodeAffect, nodes.divsTemp);
       toggleActive(e.target);
       if (nodeAffect !== null) {
         nodeAffect.goTo();

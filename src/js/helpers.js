@@ -1,5 +1,7 @@
 /* global jQuery */
-import {nodes} from './nodes';
+import {
+  nodes
+} from './nodes';
 const helpers = (function () {
   (function ($) {
     $.fn.goTo = function () {
@@ -15,13 +17,11 @@ const helpers = (function () {
    * @param  {array} divs=nodes.divs
    * @returns {void}
    */
-  function divVisibility (divId = null, divs = nodes.divs) {
+  function divVisibility (divId, divs) {
     var div = '';
     var visibleDivId = null;
 
-    if (visibleDivId === divId) {
-      visibleDivId = null;
-    } else {
+    if (visibleDivId !== divId) {
       visibleDivId = divId;
     }
     for (let i = 0, len = divs.length; i < len; i += 1) {
@@ -61,12 +61,12 @@ const helpers = (function () {
 
   /**
    * @param  {object} nodeClick=*clicked node*
-   * @param  {object} nodeAffect=null
+   * @param  {object} nodeAffect=*affected node*
    * @returns {void}
    */
   function navigationListener (nodeClick, nodeAffect = null) {
     nodeClick.addEventListener('click', (e) => {
-      divVisibility(nodeAffect);
+      divVisibility(nodeAffect, nodes.divs);
       toggleActive(e.target);
       if (nodeAffect !== null) {
         nodeAffect.goTo();
@@ -74,7 +74,20 @@ const helpers = (function () {
     });
   }
 
+  /**
+   * @param  {object} nodeClick=*clicked node*
+   * @param  {object} nodeAffect=*affected node*
+   * @returns {void}
+   */
+  function getInfo (nodeClick, nodeAffect) {
+    nodeClick.addEventListener('click', () => {
+      divVisibility(nodeAffect, nodes.coursesInfo);
+      nodeAffect.goTo();
+    });
+  }
+
   return {
+    getInfo,
     navigationListener
   };
 })();
