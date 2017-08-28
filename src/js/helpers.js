@@ -1,5 +1,7 @@
 /* global jQuery */
-import {nodes} from './nodes';
+import {
+  nodes
+} from './nodes';
 const helpers = (function () {
   (function ($) {
     $.fn.goTo = function () {
@@ -19,9 +21,7 @@ const helpers = (function () {
     var div = '';
     var visibleDivId = null;
 
-    if (visibleDivId === divId) {
-      visibleDivId = null;
-    } else {
+    if (visibleDivId !== divId) {
       visibleDivId = divId;
     }
     for (let i = 0, len = divs.length; i < len; i += 1) {
@@ -74,7 +74,22 @@ const helpers = (function () {
     });
   }
 
+  /**
+   * @param  {object} nodeClick=*clicked node*
+   * @param  {object} nodeAffect=null
+   * @returns {void}
+   */
+  function coursesInfo (nodeClick, nodeAffect = null) {
+    nodeClick.addEventListener('click', () => {
+      divVisibility(nodeAffect, nodes.coursesInfo);
+      if (nodeAffect !== null) {
+        nodeAffect.goTo();
+      }
+    });
+  }
+
   return {
+    coursesInfo,
     navigationListener
   };
 })();
