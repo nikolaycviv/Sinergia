@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" />
   <meta name="theme-color" content="black">
-  <title>Синергия Плюс</title>
-  <link rel="manifest" href="./manifest.json">
+  <title>Test</title>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='./style.css'>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         return;
       }
       js.id = id;
-      // js.src = '//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.9';
+      js.src = '//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.9';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
@@ -615,8 +615,6 @@
         </div>
       </div>
     </div>
-    <!--  Google Maps    -->
-    <div id="map"></div>
     <!--  Copyright    -->
     <div id="copyright" class="row">
       <div class="container">
@@ -625,30 +623,11 @@
             <h4>Повече информация може да намерите на нашата facebook страница.</h4>
             <img alt="" id="facebook">
           </a>
-          <!--<a href="#" class="social"><img alt="" id="twitter">Twitter</a>
-                <a href="#" class="social"><img alt="" id="linkedin">LinkedIn</a>-->
         </div>
         <p>&copy; 2017 - Учебен център "Синергия Плюс". Всички права запазени. Designed and created by Nikolay Ivanov</p>
       </div>
     </div>
   </div>
-  <script>
-    function initMap() {
-      var loc = {
-        lat: 43.841800,
-        lng: 25.949468
-      };
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: loc,
-        zoom: 15
-      });
-      var marker = new google.maps.Marker({
-        map: map,
-        position: loc
-      });
-    }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzLn6M-AjLz2hoe_mo_YfLTyafe-45TEk&callback=initMap"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 </body>

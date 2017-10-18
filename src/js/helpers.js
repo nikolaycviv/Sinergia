@@ -1,97 +1,94 @@
 /* global jQuery */
 import {
-  nodes
+    nodes
 } from './nodes';
-const helpers = (function () {
-  (function ($) {
-    $.fn.goTo = function () {
-      $('html, body').animate({
-        scrollTop: `${$(this).offset().top}px`
-      }, 'fast');
-      // return this; // for chaining...
-    };
-  })(jQuery);
+const helpers = (() => {
+    (($) => {
+        $.fn.goTo = () => {
+            $('html, body').animate({
+                scrollTop: `${$(this).offset().top}px`
+            }, 'fast');
+            // return this; // for chaining...
+        };
+    })(jQuery);
 
-  /**
-   * @param  {number} divId=null
-   * @param  {array} divs=nodes.divs
-   * @returns {void}
-   */
-  function divVisibility (divId, divs) {
-    var div = '';
-    var visibleDivId = null;
-
-    if (visibleDivId !== divId) {
-      visibleDivId = divId;
+    /**
+     * @param  {object} visibleDivId = {}
+     * @param  {object} div = {}
+     * @returns {void}
+     */
+    function toggleElementVisibility(visibleDivId, div) {
+        if (visibleDivId === div) {
+            // divId.classList.add('show')
+            // divId.classList.remove('hide')
+            div.addClass('show').removeClass('hide');
+        } else {
+            // divId.classList.remove('show')
+            // divId.classList.add('hide')
+            div.removeClass('show').addClass('hide');
+        }
     }
-    for (let i = 0, len = divs.length; i < len; i += 1) {
-      div = divs[i];
-      if (visibleDivId === null) {
-        divs.forEach((eachDiv) => {
-          // eachDiv.classList.add('show')
-          eachDiv.addClass('show');
+
+    /**
+     * @param  {number} divId=null // *null or current divId to be visible*
+     * @param  {array} divs=nodes.divs // *each to be visible or not*
+     * @returns {void}
+     */
+    function divVisibility(divId, divs) {
+        if (divId !== null) {
+            for (let i = 0, len = divs.length; i < len; i += 1) {
+                toggleElementVisibility(divId, divs[i]);
+            }
+        }
+    }
+
+    /**
+     * @param  {object} node=*selected node*
+     * @param  {array} arrayNodes=nodes.navDivs
+     * @returns {void}
+     */
+    function toggleActive(node, arrayNodes = nodes.navDivs) {
+        node.classList.add('navActive');
+        for (let i = 0, len = arrayNodes.length; i < len; i += 1) {
+            if (node !== arrayNodes[i]) {
+                arrayNodes[i].classList.remove('navActive');
+            }
+        }
+    }
+
+    /**
+     * @param  {object} nodeClick=*clicked node*
+     * @param  {object} nodeAffect=*affected node*
+     * @returns {void}
+     */
+    function navigationListener(nodeClick, nodeAffect = null) {
+        nodeClick.addEventListener('click', (e) => {
+            divVisibility(nodeAffect, nodes.divs);
+            toggleActive(e.target);
+            if (nodeAffect !== null) {
+                nodeAffect.goTo();
+            }
         });
-        return;
-      }
-      if (visibleDivId === div) {
-        // divId.classList.add('show')
-        // divId.classList.remove('hide')
-        div.addClass('show').removeClass('hide');
-      } else {
-        // divId.classList.remove('show')
-        // divId.classList.add('hide')
-        div.removeClass('show').addClass('hide');
-      }
     }
-  }
 
-  /**
-   * @param  {object} node=*selected node*
-   * @param  {array} arrayNodes=nodes.navDivs
-   * @returns {void}
-   */
-  function toggleActive (node, arrayNodes = nodes.navDivs) {
-    node.classList.add('navActive');
-    for (let i = 0, len = arrayNodes.length; i < len; i += 1) {
-      if (node !== arrayNodes[i]) {
-        arrayNodes[i].classList.remove('navActive');
-      }
+    /**
+     * @param  {object} nodeClick=*clicked node*
+     * @param  {object} nodeAffect=*affected node*
+     * @returns {void}
+     */
+    function getInfo(nodeClick, nodeAffect) {
+        nodeClick.addEventListener('click', () => {
+            divVisibility(nodeAffect, nodes.coursesInfo);
+            nodeAffect.goTo();
+        });
     }
-  }
 
-  /**
-   * @param  {object} nodeClick=*clicked node*
-   * @param  {object} nodeAffect=*affected node*
-   * @returns {void}
-   */
-  function navigationListener (nodeClick, nodeAffect = null) {
-    nodeClick.addEventListener('click', (e) => {
-      divVisibility(nodeAffect, nodes.divs);
-      toggleActive(e.target);
-      if (nodeAffect !== null) {
-        nodeAffect.goTo();
-      }
-    });
-  }
-
-  /**
-   * @param  {object} nodeClick=*clicked node*
-   * @param  {object} nodeAffect=*affected node*
-   * @returns {void}
-   */
-  function getInfo (nodeClick, nodeAffect) {
-    nodeClick.addEventListener('click', () => {
-      divVisibility(nodeAffect, nodes.coursesInfo);
-      nodeAffect.goTo();
-    });
-  }
-
-  return {
-    getInfo,
-    navigationListener
-  };
+    return {
+        getInfo,
+        navigationListener
+    };
 })();
 
 export {
-  helpers
+    helpers
 };

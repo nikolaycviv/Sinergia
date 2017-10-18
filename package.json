@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "prod": "webpack -p",
-    "sass": "node-sass -w src/scss/ -o src/css/"
+    "sass": "node-sass -w src/scss -o src/css",
+    "sass-test": "node-sass -w test/css -o test/css"
   },
   "repository": {
     "type": "git",

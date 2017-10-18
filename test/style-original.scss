@@ -21,7 +21,6 @@ body {
 // .cloak {
 //   display: block;
 // }
-
 hr {
   width: 70px;
   border-color: $navGreen;
@@ -169,8 +168,7 @@ hr {
       padding-bottom: 2rem;
     }
     margin: 20px auto 50px auto;
-    padding: 25px;
-    // p {
+    padding: 25px; // p {
     //   font-size: 18px;
     // }
   }
@@ -396,6 +394,12 @@ hr {
   visibility: visible;
 }
 
+#formMessage {
+  margin-bottom: 2%;
+  height: 100px;
+  max-width: 100%;
+}
+
 // Media queries
 // nav-bar collapses when display-width decreases
 @media screen and (max-width: 1200px) {
@@ -440,9 +444,6 @@ hr {
   .jumboBanner .banner {
     font-size: 72px;
   }
-  // .cloak {
-  //   display: none;
-  // }
 }
 
 @media screen and (max-width: 500px) {
