@@ -16,8 +16,10 @@ export default (() => {
         helpers.navigationListener(nodes.contact, nodes.$phoneContact);
         helpers.navigationListener(nodes.home);
 
-        helpers.getInfo(nodes.vouchersInfoClick, nodes.$vouchersInfo);
-        helpers.getInfo(nodes.individualLessonsInfoClick, nodes.$individualLessonsInfo);
-        helpers.getInfo(nodes.distanceLearningInfoClick, nodes.$distanceLearningInfo);
+        helpers.getInfo(nodes.childrenInfoClick, nodes.childrenInfo);
+        // helpers.getInfo(nodes.dultsInfoClick, nodes.adultsInfo);
+        helpers.getInfo(nodes.vouchersInfoClick, nodes.vouchersInfo);
+        helpers.getInfo(nodes.individualLessonsInfoClick, nodes.individualLessonsInfo);
+        helpers.getInfo(nodes.distanceLearningInfoClick, nodes.distanceLearningInfo);
     });
 })();

@@ -30,6 +30,18 @@ const helpers = (() => {
     }
 
     /**
+     * @param  {number} el -> element to toggle visible or not
+     * @returns {void}
+     */
+    function toggleSingleElementVisibility(el) {
+        if (el.style.display === '' || el.style.display === 'none') {
+            el.style.display = 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    }
+
+    /**
      * @param  {number} divId=null // *null or current divId to be visible*
      * @param  {array} divs=nodes.divs // *each to be visible or not*
      * @returns {void}
@@ -78,8 +90,7 @@ const helpers = (() => {
      */
     function getInfo(nodeClick, nodeAffect) {
         nodeClick.addEventListener('click', () => {
-            divVisibility(nodeAffect, nodes.coursesInfo);
-            nodeAffect.goTo();
+            toggleSingleElementVisibility(nodeAffect);
         });
     }
 

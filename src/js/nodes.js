@@ -30,14 +30,16 @@ const nodes = (() => {
     n.home = document.querySelector('.navbar-brand');
     n.$container = $('div');
 
+    n.childrenInfoClick = document.querySelector('#childrenInfoClick');
+    // n.adultsInfoClick = document.querySelector('#adultsInfoClick');
     n.vouchersInfoClick = document.querySelector('#vouchersInfoClick');
     n.individualLessonsInfoClick = document.querySelector('#individualLessonsInfoClick');
     n.distanceLearningInfoClick = document.querySelector('#distanceLearningInfoClick');
-    n.$vouchersInfo = $('#vouchersInfo');
-    n.$individualLessonsInfo = $('#individualLessonsInfo');
-    n.$distanceLearningInfo = $('#distanceLearningInfo');
-    n.coursesDivs = [n.vouchersInfoClick, n.individualLessonsInfoClick, n.distanceLearningInfoClick];
-    n.coursesInfo = [n.$vouchersInfo, n.$individualLessonsInfo, n.$distanceLearningInfo];
+    n.childrenInfo = document.getElementById('childrenInfo');
+    // n.adultsInfo = document.getElementById('adultsInfo');
+    n.vouchersInfo = document.getElementById('vouchersInfo');
+    n.individualLessonsInfo = document.getElementById('individualLessonsInfo');
+    n.distanceLearningInfo = document.getElementById('distanceLearningInfo');
 
     // n.navDivs = [n.navAbout, n.navNews, n.navAdvantages, n.navServices, n.navCourses, n.navDiplomas, n.navTeam, n.navCarriers, n.contact];
     n.navDivs = [n.navAbout, n.navNews, n.navAdvantages, n.navCourses, n.navDiplomas, n.navTeam, n.navCarriers, n.contact];

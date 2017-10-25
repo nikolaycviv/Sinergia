@@ -128,6 +128,10 @@ hr {
   }
 }
 
+#childrenInfo, #adultsInfo, #vouchersInfo, #individualLessonsInfo, #distanceLearningInfo {
+  display: none;
+}
+
 // About section
 #aboutBlock {
   width: 94%;
