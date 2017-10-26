@@ -4,7 +4,7 @@ import {
 } from './nodes';
 const helpers = (() => {
     (($) => {
-        $.fn.goTo = () => {
+        $.fn.goTo = function goTo() {
             $('html, body').animate({
                 scrollTop: `${$(this).offset().top}px`
             }, 'fast');
@@ -18,15 +18,7 @@ const helpers = (() => {
      * @returns {void}
      */
     function toggleElementVisibility(visibleDivId, div) {
-        if (visibleDivId === div) {
-            // divId.classList.add('show')
-            // divId.classList.remove('hide')
-            div.addClass('show').removeClass('hide');
-        } else {
-            // divId.classList.remove('show')
-            // divId.classList.add('hide')
-            div.removeClass('show').addClass('hide');
-        }
+        visibleDivId === div ? div.show() : div.hide();
     }
 
     /**
@@ -34,24 +26,18 @@ const helpers = (() => {
      * @returns {void}
      */
     function toggleSingleElementVisibility(el) {
-        if (el.style.display === '' || el.style.display === 'none') {
-            el.style.display = 'block';
-        } else {
-            el.style.display = 'none';
-        }
+        el.is(':visible') ? el.hide() : el.show();
     }
 
     /**
-     * @param  {number} divId=null // *null or current divId to be visible*
-     * @param  {array} divs=nodes.divs // *each to be visible or not*
+     * @param  {number} divId = null // *null or current divId to be visible*
+     * @param  {array} divs = nodes.divs // *each to be visible or not*
      * @returns {void}
      */
     function divVisibility(divId, divs) {
-        if (divId !== null) {
-            for (let i = 0, len = divs.length; i < len; i += 1) {
-                toggleElementVisibility(divId, divs[i]);
-            }
-        }
+        divs.map((div) => {
+            divId === null ? div.show() : toggleElementVisibility(divId, div);
+        });
     }
 
     /**
@@ -59,38 +45,40 @@ const helpers = (() => {
      * @param  {array} arrayNodes=nodes.navDivs
      * @returns {void}
      */
-    function toggleActive(node, arrayNodes = nodes.navDivs) {
-        node.classList.add('navActive');
-        for (let i = 0, len = arrayNodes.length; i < len; i += 1) {
-            if (node !== arrayNodes[i]) {
-                arrayNodes[i].classList.remove('navActive');
-            }
-        }
-    }
-
-    /**
-     * @param  {object} nodeClick=*clicked node*
-     * @param  {object} nodeAffect=*affected node*
-     * @returns {void}
-     */
-    function navigationListener(nodeClick, nodeAffect = null) {
-        nodeClick.addEventListener('click', (e) => {
-            divVisibility(nodeAffect, nodes.divs);
-            toggleActive(e.target);
-            if (nodeAffect !== null) {
-                nodeAffect.goTo();
-            }
+    function toggleActive(node, arrayNodes) {
+        arrayNodes.map((arrayNode) => {
+            node.id === arrayNode[0].id ? arrayNode.addClass('navActive') : arrayNode.removeClass('navActive');
         });
     }
 
     /**
-     * @param  {object} nodeClick=*clicked node*
-     * @param  {object} nodeAffect=*affected node*
+     * @param  {object} nodeClick = *clicked node*
+     * @param  {object} nodeAffect = *affected node*
+     * @returns {void}
+     */
+    function navigationListener(nodeClick, nodeAffect) {
+        nodeClick.on('click', (e) => {
+            if (nodeClick[0].classList.contains('navbar-brand')) {
+                nodeAffect = null;
+            }
+            divVisibility(nodeAffect, nodes.divs);
+            toggleActive(e.target, nodes.navDivs);
+            nodeAffect ? nodeAffect.goTo() : nodeClick.goTo();
+        });
+    }
+
+    /**
+     * gets the info (toggles - shows/hides - additional div) about the selected education
+     * @param  {object} nodeClick = *clicked node*
+     * @param  {object} nodeAffect = *affected node*
      * @returns {void}
      */
     function getInfo(nodeClick, nodeAffect) {
-        nodeClick.addEventListener('click', () => {
+        nodeClick.on('click', () => {
             toggleSingleElementVisibility(nodeAffect);
+            if (nodeAffect.is(':visible')) {
+                nodeAffect.goTo();
+            }
         });
     }
 
