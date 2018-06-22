@@ -1,7 +1,5 @@
 /* global jQuery */
-import {
-    nodes
-} from './nodes';
+import { nodes } from './nodes';
 const helpers = (() => {
     (($) => {
         $.fn.goTo = function goTo() {
@@ -37,6 +35,7 @@ const helpers = (() => {
     function divVisibility(divId, divs) {
         divs.map((div) => {
             divId === null ? div.show() : toggleElementVisibility(divId, div);
+            return true;
         });
     }
 
@@ -48,6 +47,7 @@ const helpers = (() => {
     function toggleActive(node, arrayNodes) {
         arrayNodes.map((arrayNode) => {
             node.id === arrayNode[0].id ? arrayNode.addClass('navActive') : arrayNode.removeClass('navActive');
+            return true;
         });
     }
 
@@ -88,6 +88,5 @@ const helpers = (() => {
     };
 })();
 
-export {
-    helpers
-};
+export { helpers };
+
