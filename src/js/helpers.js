@@ -1,14 +1,8 @@
-/* global jQuery */
 import { nodes } from './nodes';
 const helpers = (() => {
-    (($) => {
-        $.fn.goTo = function goTo() {
-            $('html, body').animate({
-                scrollTop: `${$(this).offset().top}px`
-            }, 'fast');
-            // return this; // for chaining...
-        };
-    })(jQuery);
+
+    // element.scrollIntoView(alignToTop = true);
+
 
     /**
      * @param  {object} visibleDivId = {}
@@ -16,7 +10,7 @@ const helpers = (() => {
      * @returns {void}
      */
     function toggleElementVisibility(visibleDivId, div) {
-        visibleDivId === div ? div.show() : div.hide();
+        visibleDivId === div ? div.style.display = 'block' : div.style.display = 'none';
     }
 
     /**
@@ -24,7 +18,7 @@ const helpers = (() => {
      * @returns {void}
      */
     function toggleSingleElementVisibility(el) {
-        el.is(':visible') ? el.hide() : el.show();
+        matches(el, ':visible') ? el.style.display = 'none' : el.style.display = 'block';
     }
 
     /**
@@ -34,7 +28,7 @@ const helpers = (() => {
      */
     function divVisibility(divId, divs) {
         divs.map((div) => {
-            divId === null ? div.show() : toggleElementVisibility(divId, div);
+            divId === null ? div.style.display = 'block' : toggleElementVisibility(divId, div);
             return true;
         });
     }
@@ -46,7 +40,7 @@ const helpers = (() => {
      */
     function toggleActive(node, arrayNodes) {
         arrayNodes.map((arrayNode) => {
-            node.id === arrayNode[0].id ? arrayNode.addClass('navActive') : arrayNode.removeClass('navActive');
+            node.id === arrayNode.id ? arrayNode.classList.add('navActive') : arrayNode.classList.remove('navActive');
             return true;
         });
     }
@@ -57,15 +51,24 @@ const helpers = (() => {
      * @returns {void}
      */
     function navigationListener(nodeClick, nodeAffect) {
-        nodeClick.on('click', (e) => {
-            if (nodeClick[0].classList.contains('navbar-brand')) {
+        nodeClick.addEventListener('click', (e) => {
+            if (nodeClick.classList.contains('navbar-brand')) {
                 nodeAffect = null;
             }
             divVisibility(nodeAffect, nodes.divs);
             toggleActive(e.target, nodes.navDivs);
-            nodeAffect ? nodeAffect.goTo() : nodeClick.goTo();
+            nodeAffect ? nodeAffect.scrollIntoView(true) : nodeClick.scrollIntoView(true);
         });
     }
+
+    /**
+     * @param  {object} el = element (node)
+     * @param  {object} selector = css selector
+     * @returns {boolean}
+     */
+    function matches(el, selector) {
+        return (el.matches || el.matchesSelector || el.msMatchesSelector || el.mozMatchesSelector || el.webkitMatchesSelector || el.oMatchesSelector).call(el, selector);
+    };
 
     /**
      * gets the info (toggles - shows/hides - additional div) about the selected education
@@ -74,10 +77,10 @@ const helpers = (() => {
      * @returns {void}
      */
     function getInfo(nodeClick, nodeAffect) {
-        nodeClick.on('click', () => {
+        nodeClick.addEventListener('click', () => {
             toggleSingleElementVisibility(nodeAffect);
-            if (nodeAffect.is(':visible')) {
-                nodeAffect.goTo();
+            if (matches(nodeAffect, ':visible')) {
+                nodeAffect.scrollIntoView();
             }
         });
     }
