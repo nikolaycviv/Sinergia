@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-
 class Map extends Component {
     componentDidMount() {
         // Connect the initMap() function within this class to the global window context,

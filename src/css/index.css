@@ -48,10 +48,8 @@ hr {
   .navbar .navActive {
     color: #8eb640; }
 
-#row {
-  padding-top: 50px; }
-  #row .fb-page {
-    padding-top: 100px; }
+.fb-page {
+  padding-top: 100px; }
 
 .parallax, .parallaxTop, .parallaxSection {
   background-attachment: fixed;
