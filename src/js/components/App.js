@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import scrollToComponent from 'react-scroll-to-component';
+import ReactDOM from 'react-dom';
 import About from './About';
 // import Services from './Services';
 import Advantages from './Advantages';
@@ -15,31 +15,54 @@ import Phone from './Phone';
 import Team from './Team';
 import Top from './Top';
 import WorkingHours from './WorkingHours';
-class App extends Component {
-  // componentDidMount() {
-  //   scrollToComponent(this.About, { offset: 0, align: 'top', duration: 500, ease:'inCirc'});
-  // }
 
-  // scrollFunc = (element) => {
-  //   scrollToComponent(element, { offset: 0, align: 'top', duration: 500})
-  // }
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      about: '',
+      news: '',
+      advantages: '',
+      courses: '',
+      diplomas: '',
+      team: '',
+      // services: '',
+      careers: '',
+      contact: ''
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      about: ReactDOM.findDOMNode(this.refs.about),
+      news: ReactDOM.findDOMNode(this.refs.news),
+      advantages: ReactDOM.findDOMNode(this.refs.advantages),
+      courses: ReactDOM.findDOMNode(this.refs.courses),
+      diplomas: ReactDOM.findDOMNode(this.refs.diplomas),
+      team: ReactDOM.findDOMNode(this.refs.team),
+      // services: ReactDOM.findDOMNode(this.refs.services),
+      careers: ReactDOM.findDOMNode(this.refs.careers),
+      contact: ReactDOM.findDOMNode(this.refs.contact)
+    })
+  }
+
+  scrollToElement = () => {
+  }
 
   render() {
     return (
       <div className="App">
-        {/* <Nav onClick={() => this.scrollFunc(this.About)} /> */}
-        <Nav/>
+        <Nav onClick={this.scrollToElement} test={this.state} />
         <Top />
-        <About/>
-        {/* <About ref={(section) => { this.About = section; }} /> */}
-        <News />
-        <Advantages />
-        <Courses />
-        <Diplomas />
-        <Team />
-        {/* <Services /> */}
-        <Careers />
-        <Contact />
+        <About ref="about" />
+        <News ref="news" />
+        <Advantages ref="advantages" />
+        <Courses ref="courses" />
+        <Diplomas ref="diplomas" />
+        <Team ref="team" />
+        {/* <Services ref="services"/> */}
+        <Careers ref="careers" />
+        <Contact ref="contact" />
         <Phone />
         <WorkingHours />
         <Map />

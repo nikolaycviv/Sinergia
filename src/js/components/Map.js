@@ -1,4 +1,5 @@
 /* global google */
+
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -20,7 +21,7 @@ class Map extends Component {
             center: loc,
             zoom: 15
         });
-        var marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({ // eslint-disable-line no-unused-vars
             map: map,
             position: loc
         });

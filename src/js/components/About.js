@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
 
 class About extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    // navigation = () => {
-    //     var aboutBlock = ReactDOM.findDOMNode(this.refs.aboutBlock);
-    //     this.props.name.addEventListener('click', (e) => {
-    //         // divVisibility(nodeAffect, nodes.divs);
-    //         aboutBlock.scrollIntoView(true);
-    //     });
-    // }
-
     render() {
         return (
-            <div id="aboutBlock" ref="aboutBlock" className="container show">
+            <div id="aboutBlock" className="container show">
                 <div className="col-lg-6">
                     <div className="fb-page" data-href="https://www.facebook.com/SinergiaPlusCentre/" data-tabs="timeline"
                         data-width="500" data-height="70" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false"
@@ -44,7 +31,5 @@ class About extends Component {
         );
     }
 }
-
-
 
 export default About;
