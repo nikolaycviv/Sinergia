@@ -25,19 +25,20 @@
   "author": "Nikolay Ivanov",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
     "react-scroll-to-component": "^1.0.2"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
-    "concurrently": "^3.5.1",
+    "babel-eslint": "^8.2.6",
+    "concurrently": "^3.6.1",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "node-sass": "^4.6.1",
-    "prettier": "^1.12.1"
+    "eslint-plugin-prettier": "^2.6.2",
+    "node-sass": "^4.9.2",
+    "prettier": "^1.14.0"
   },
   "bugs": {
     "url": "https://github.com/nikolaycviv/Sinergia/issues"
