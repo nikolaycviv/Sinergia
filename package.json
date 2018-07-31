@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Sinergia Plus, Company web-site",
   "main": "./src/index.js",
+  "homepage": "https://nikolaycviv.github.io/Sinergia/",
   "scripts": {
     "start": "concurrently \"npm run react-start\" \"npm run sass\"",
     "react-start": "react-scripts start",
@@ -10,6 +11,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
     "prune": "npm prune"
   },
   "repository": {
@@ -39,6 +41,5 @@
   },
   "bugs": {
     "url": "https://github.com/nikolaycviv/Sinergia/issues"
-  },
-  "homepage": "https://github.com/nikolaycviv/Sinergia#readme"
+  }
 }
