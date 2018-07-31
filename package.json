@@ -5,13 +5,14 @@
   "main": "./src/index.js",
   "homepage": "https://nikolaycviv.github.io/Sinergia/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "concurrently \"npm run react-start\" \"npm run sass\"",
     "react-start": "react-scripts start",
     "sass": "./node_modules/.bin/node-sass -w src/scss -o src/css",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
     "prune": "npm prune"
   },
   "repository": {
