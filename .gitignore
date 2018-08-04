@@ -65,6 +65,7 @@ node_modules/**/*
 logs/
 Log/
 Logs/*.log
+dist/
 
 # Windows image file caches
 Thumbs.db
