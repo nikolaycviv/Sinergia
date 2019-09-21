@@ -1,50 +1,51 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "node": true
-    },
-    "parserOptions": {
-        "ecmaVersion": 8,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "impliedStrict": true,
-            "classes": true,
-            "jsx": true
-        }
-    },
-    "extends": [
-        "react-app",
-        "prettier",
-        "prettier/react"
-    ],
-    "plugins": [
-        "prettier"
-    ],
-    "parser": "babel-eslint",
-    "rules": {
-        "prettier/prettier": "error",
-        "comma-dangle": [
-            "warn",
-            "never"
-        ],
-        "quotes": [
-            2,
-            "double"
-        ],
-        "no-unused-expressions": "warn",
-        "no-useless-concat": "warn",
-        "block-scoped-var": "error",
-        "consistent-return": "error",
-        "no-mixed-operators": "off",
-        "function-paren-newline": [
-            "error",
-            "consistent"
-        ],
-        "one-var": [
-            "warn",
-            "always"
-        ]
+  "extends": [
+    "standard",
+    "standard-jsx"
+  ],
+  "plugins": [
+    "standard",
+    "promise",
+    "react",
+    "react-hooks",
+    "mocha"
+  ],
+  "env": {
+    "mocha": true,
+    "jasmine": true
+  },
+  "rules": {
+    "standard/no-callback-literal": 0,
+    "mocha/no-exclusive-tests": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "globals": {
+    "$": true,
+    "after": true,
+    "afterEach": true,
+    "analytics": true,
+    "before": true,
+    "beforeEach": true,
+    "context": true,
+    "describe": true,
+    "expect": true,
+    "fetch": true,
+    "HTMLElement": true,
+    "Image": true,
+    "it": true,
+    "jQuery": true,
+    "localStorage": true,
+    "location": true,
+    "performance": true,
+    "sandbox": true,
+    "sinon": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "allowImportExportEverywhere": true,
+    "ecmaFeatures": {
+      "jsx": true
     }
+  }
 }
