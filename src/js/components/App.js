@@ -1,24 +1,24 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import About from './About';
-// import Services from './Services';
-import Advantages from './Advantages';
-import Careers from './Careers';
-import Contact from './Contact';
-import Courses from './Courses';
-import Diplomas from './Diplomas';
-import Footer from './Footer';
-import Map from './Map';
-import Nav from './Nav';
-import News from './News';
-import Phone from './Phone';
-import Team from './Team';
-import Top from './Top';
-import WorkingHours from './WorkingHours';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import About from './About'
+// import Services from './Services'
+import Advantages from './Advantages'
+import Careers from './Careers'
+import Contact from './Contact'
+import Courses from './Courses'
+import Diplomas from './Diplomas'
+import Footer from './Footer'
+import Map from './Map'
+import Nav from './Nav'
+import News from './News'
+import Phone from './Phone'
+import Team from './Team'
+import Top from './Top'
+import WorkingHours from './WorkingHours'
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       about: '',
       news: '',
@@ -67,9 +67,8 @@ class App extends Component {
         <WorkingHours />
         <Map />
         <Footer />
-      </div>
-    );
+      </div>)
   }
 }
 
-export default App;
+export default App

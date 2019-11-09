@@ -34,9 +34,17 @@
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "concurrently": "^4.1.2",
-    "eslint": "^6.4.0",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-mocha": "^6.2.1",
+    "eslint-plugin-node": "^9.2.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^4.0.0",
+    "nyc": "^14.1.1",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0",
     "node-sass": "*"
   },
   "bugs": {
